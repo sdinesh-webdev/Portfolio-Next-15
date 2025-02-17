@@ -41,7 +41,7 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="w-full max-sm:h-[2500px]">
+    <main className="w-full max-sm:h-[2300px]">
       {isLoading ? (
         <Loading />
       ) : (
