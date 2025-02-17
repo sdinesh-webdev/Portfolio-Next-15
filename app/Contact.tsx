@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Arrow from '@/images/Arrow.svg'
 import React from 'react';
 import Work from './Work'; // Assuming Work component is exported with its props type
 import './globals.css';
