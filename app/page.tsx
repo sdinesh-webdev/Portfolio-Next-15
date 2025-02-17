@@ -14,15 +14,9 @@ export default function Page() {
 
   useEffect(() => {
     console.log('useEffect triggered');
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    
     const lenis = new Lenis({
-      duration: isMobile ? 1 : 2,
+      duration: 2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      smoothWheel: !isMobile,
-      wheelMultiplier: isMobile ? 1.5 : 1,
-      touchMultiplier: 2,
     });
 
     function raf(time: number) {
@@ -47,7 +41,7 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="w-full desktop:overflow-visible sm:overflow-visible max-sm:min-h-[2300px] max-sm:overflow-y-auto max-sm:overflow-x-hidden max-sm:will-change-transform">
+    <main className="w-full max-sm:h-[2300px] ">
       {isLoading ? (
         <Loading />
       ) : (
