@@ -28,7 +28,7 @@ export const Intro: React.FC = () => {
   }, []);
 
   return (
-    <section id="svgintro" className="intro-section  w-full m-0 p-4 sm:p-0">
+    <section id="svgintro" className="intro-section w-full m-0 p-4 sm:p-0">
       <div className="svg-container w-full h-auto pb-16 sm:w-400px mb-[-15%] sm:mb-0">
         <svg  
           ref={svgRef}
@@ -101,9 +101,9 @@ export const Intro: React.FC = () => {
         </svg>
       </div>
 
-      <div className="intro text-left mt-4 sm:mt-0" ref={introRef} style={{ opacity: 0 }}>
-        <strong className="pb-8">My name is S Dinesh Kumar : Code Meets Creativity. <br /></strong>
-        <p className="leading-relaxed max-sm:text-3xl max-sm:leading-loose">
+      <div className="intro text-left mt-4 sm:mt-0 font-matter" ref={introRef} style={{ opacity: 0 }}>
+        <strong className="pb-8 font-matter">My name is S Dinesh Kumar : Code Meets Creativity. <br /></strong>
+        <p className="leading-relaxed max-sm:text-3xl max-sm:leading-loose font-matter">
       I&apos;m a multidisciplinary full-stack developer from India who loves building digital experiences that look great and work well. <br />
       I enjoy learning new skills and using different tools to create simple, creative solutions. <br />
       I also love working with others to build the future together.
