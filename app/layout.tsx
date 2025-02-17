@@ -15,7 +15,9 @@ const matter = localFont({
       style: 'normal',
     },
   ],
-  variable: '--font-matter'
+  variable: '--font-matter',
+  preload: true,
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
