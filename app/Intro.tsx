@@ -104,7 +104,7 @@ export const Intro: React.FC = () => {
       <div className="intro text-left mt-4 sm:mt-0" ref={introRef} style={{ opacity: 0 }}>
         <strong className="pb-8">My name is S Dinesh Kumar : Code Meets Creativity. <br /></strong>
         <p className="leading-relaxed max-sm:text-3xl max-sm:leading-loose">
-      I'm a multidisciplinary full-stack developer from India who loves building digital experiences that look great and work well. <br />
+      I&apos;m a multidisciplinary full-stack developer from India who loves building digital experiences that look great and work well. <br />
       I enjoy learning new skills and using different tools to create simple, creative solutions. <br />
       I also love working with others to build the future together.
         </p>

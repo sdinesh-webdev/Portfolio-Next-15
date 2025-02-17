@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { CSSProperties } from 'react';
+import React from 'react';
 import Work from './Work'; // Assuming Work component is exported with its props type
 import './globals.css';
 import useGsapReveal from './useGsapReveal';
@@ -52,10 +52,12 @@ const Contact: React.FC = () => {
             containerClass="w-full h-24"
             overlayClass="absolute top-0 left-0 w-full h-full bg-black -z-10 transform scale-y-0 origin-top"
           />
-          <img 
+          <Image 
             src="/arrow.svg"
             alt="arrow" 
             className="absolute right-4 top-1/2 mr-6 w-10 h-10 font-bold arrow-icon"
+            width={40}
+            height={40}
           />
         </div>
       ))}

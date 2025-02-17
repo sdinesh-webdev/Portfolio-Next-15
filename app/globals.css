@@ -39,7 +39,8 @@
     font-family: Matter, Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
-    @apply bg-white text-black;
+    background-color: #ffffff;
+    color: #000000;
   }
 }
 

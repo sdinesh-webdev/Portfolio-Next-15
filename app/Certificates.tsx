@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import useGsapReveal from './useGsapReveal';
 import Work from './Work';
 import './globals.css';
@@ -36,7 +36,7 @@ const Certificates: React.FC = () => {
       id: 'cert3',
       link: "https://www.coursera.org/account/accomplishments/specialization/ZPTNMXAC7FQB",
       name: "Search Engine Optimization (SEO) Specializations",
-      image: "/2.webp",
+      image: "/certificate_3.webp",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "SEO Certificate"
     },
@@ -44,7 +44,7 @@ const Certificates: React.FC = () => {
       id: 'cert4',
       link: "https://example.com",
       name: "UI Fullstack With React js By -- Sudhakar Sharma Sir",
-      image: "/cert4.webp",
+      image: "/certificate_4.webp",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "Example Project Certificate"
     },
