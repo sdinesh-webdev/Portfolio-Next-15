@@ -5,12 +5,12 @@ import "./globals.css";
 const matter = localFont({
   src: [
     {
-      path: '../public/Matter-Light.woff2',
+      path: '../Public/Matter-Light.woff2',
       weight: '300',
       style: 'normal',
     },
     {
-      path: '../public/Matter-Medium.woff2',
+      path: '../Public/Matter-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
