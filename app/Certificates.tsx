@@ -1,11 +1,11 @@
 import React from 'react';
-// import Image from 'next/image';
+import Image from 'next/image';
 import useGsapReveal from './useGsapReveal';
 import Work from './Work';
 import './globals.css';
 
 interface WorkItem {
-  id: string; // Add id field
+  id: string;
   link: string;
   name: string;
   image: string;
@@ -14,13 +14,13 @@ interface WorkItem {
 }
 
 const Certificates: React.FC = () => {
-  const certificatesRef = useGsapReveal(2.7); // Added delay after Experience section
+  const certificatesRef = useGsapReveal(2.7);
   const workItems: WorkItem[] = [
     {
       id: 'cert1',
       link: "https://www.coursera.org/account/accomplishments/specialization/HLJUAPS49XLG",
       name: "Meta Front-End Developer Professional",
-      image: "/meta.webp",  // Updated path
+      image: "/images/meta.webp",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "Meta Front-End Developer Certificate"
     },
@@ -28,7 +28,7 @@ const Certificates: React.FC = () => {
       id: 'cert2',
       link: "https://www.coursera.org/account/accomplishments/specialization/YAPAFNUL4QA2",
       name: "IBM Back-end JavaScript Developer Professional",
-      image: "/ibm.avif",  // Updated path
+      image: "/images/ibm.avif",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "IBM Back-end JavaScript Developer Certificate"
     },
@@ -36,7 +36,7 @@ const Certificates: React.FC = () => {
       id: 'cert3',
       link: "https://www.coursera.org/account/accomplishments/specialization/ZPTNMXAC7FQB",
       name: "Search Engine Optimization (SEO) Specializations",
-      image: "/certificate_3.webp",  // Updated path
+      image: "/images/certificate_3.webp",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "SEO Certificate"
     },
@@ -44,7 +44,7 @@ const Certificates: React.FC = () => {
       id: 'cert4',
       link: "https://example.com",
       name: "UI Fullstack With React js By -- Sudhakar Sharma Sir",
-      image: "/certificate_4.webp",  // Updated path
+      image: "/images/certificate_4.webp",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "Example Project Certificate"
     },

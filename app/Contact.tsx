@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
       alt: "GitHub Profile",
     },
     {
-      link: "/Resume24.pdf",
+      link: "https://drive.google.com/file/d/1Fmeki1PaxNc7Fgmx7Wtml4OFO9_QXBA2/view?usp=drivesdk",
       name: "Download Resume",
       alt: "Resume",
     },
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
             overlayClass="absolute top-0 left-0 w-full h-full bg-black -z-10 transform scale-y-0 origin-top"
           />
           <Image 
-            src="/arrow.svg"
+            src="/images/arrow.svg"
             alt="arrow" 
             className="absolute right-4 top-1/2 mr-6 w-10 h-10 font-bold arrow-icon"
             width={40}
