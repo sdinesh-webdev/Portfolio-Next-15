@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import parse from 'html-react-parser';
@@ -32,79 +32,97 @@ const Work: React.FC<WorkProps> = ({
   const $link = useRef<HTMLSpanElement>(null);
   const $imageContainer = useRef<HTMLDivElement>(null);
 
-  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const animate = useCallback((isEntering: boolean, clientY: number) => {
     if (!$root.current) return;
     const bounds = $root.current.getBoundingClientRect();
-    const top = e.clientY < bounds.y + bounds.height / 2;
+    const top = clientY < bounds.y + bounds.height / 2;
 
-    if ($link.current) {
-      gsap.to($link.current, {
-        x: '2.5rem',
-        color: '#fff',
-        duration: 0.5,
-        ease: 'power3.out'
-      });
-    }
-    if ($imageContainer.current) {
-      gsap.to($imageContainer.current.querySelector('img'), {
-        filter: 'invert(1)',
-        duration: 0.5,
-      });
-    }
-    if ($overlay.current) {
-      gsap.fromTo(
-        $overlay.current,
-        {
-          scaleY: 0,
-          transformOrigin: top ? '0 0' : '0 100%'
-        },
-        {
-          scaleY: 1,
+    if (isEntering) {
+      if ($link.current) {
+        gsap.to($link.current, {
+          x: '2.5rem',
+          color: '#fff',
           duration: 0.5,
           ease: 'power3.out'
-        }
-      );
+        });
+      }
+      if ($imageContainer.current) {
+        gsap.to($imageContainer.current.querySelector('img'), {
+          filter: 'invert(1)',
+          duration: 0.5,
+        });
+      }
+      if ($overlay.current) {
+        gsap.fromTo(
+          $overlay.current,
+          {
+            scaleY: 0,
+            transformOrigin: top ? '0 0' : '0 100%'
+          },
+          {
+            scaleY: 1,
+            duration: 0.5,
+            ease: 'power3.out'
+          }
+        );
+      }
+    } else {
+      const elements = [$overlay.current, $link.current, $imageContainer.current?.querySelector('img')].filter((el): el is NonNullable<typeof el> => el !== null);
+      gsap.killTweensOf(elements);
+
+      if ($link.current) {
+        gsap.to($link.current, {
+          x: 0,
+          color: '#000',
+          duration: 0.3,
+          ease: 'power3.out'
+        });
+      }
+      if ($imageContainer.current) {
+        gsap.to($imageContainer.current.querySelector('img'), {
+          filter: 'invert(0)',
+          duration: 0.3,
+          ease: 'power3.out'
+        });
+      }
+      if ($overlay.current) {
+        gsap.to($overlay.current, {
+          scaleY: 0,
+          transformOrigin: top ? '0 0' : '0 100%',
+          duration: 0.7,
+          ease: 'power3.out'
+        });
+      }
     }
+  }, []);
+
+  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    animate(true, e.clientY);
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!$root.current) return;
-    const bounds = $root.current.getBoundingClientRect();
-    const top = e.clientY < bounds.y + bounds.height / 2;
+    animate(false, e.clientY);
+  };
 
-    const elements = [$overlay.current, $link.current, $imageContainer.current?.querySelector('img')].filter((el): el is NonNullable<typeof el> => el !== null);
-    gsap.killTweensOf(elements);
+  const handleTouchStart = (e: React.TouchEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    animate(true, e.touches[0].clientY);
+  };
 
-    if ($link.current) {
-      gsap.to($link.current, {
-        x: 0,
-        color: '#000',
-        duration: 0.3,
-        ease: 'power3.out'
-      });
-    }
-    if ($imageContainer.current) {
-      gsap.to($imageContainer.current.querySelector('img'), {
-        filter: 'invert(0)',
-        duration: 0.3,
-        ease: 'power3.out'
-      });
-    }
-    if ($overlay.current) {
-      gsap.to($overlay.current, {
-        scaleY: 0,
-        transformOrigin: top ? '0 0' : '0 100%',
-        duration: 0.7,
-        ease: 'power3.out'
-      });
-    }
+  const handleTouchEnd = (e: React.TouchEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    // Use the last known touch position
+    const lastTouch = e.changedTouches[0];
+    animate(false, lastTouch.clientY);
   };
 
   return (
     <a 
       ref={$root} 
       onMouseEnter={handleMouseEnter} 
-      onMouseLeave={handleMouseLeave} 
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       href={link} 
       target="_blank" 
       rel="noopener noreferrer"
