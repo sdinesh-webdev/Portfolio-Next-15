@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useState } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import parse from 'html-react-parser';
@@ -27,6 +27,7 @@ const Work: React.FC<WorkProps> = ({
   overlayClass,
   alt 
 }) => {
+  const [isAnimating, setIsAnimating] = useState(false);
   const $root = useRef<HTMLAnchorElement>(null);
   const $overlay = useRef<HTMLSpanElement>(null);
   const $link = useRef<HTMLSpanElement>(null);
@@ -94,6 +95,7 @@ const Work: React.FC<WorkProps> = ({
         });
       }
     }
+    setIsAnimating(isEntering);
   }, []);
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -104,16 +106,35 @@ const Work: React.FC<WorkProps> = ({
     animate(false, e.clientY);
   };
 
-  const handleTouchStart = (e: React.TouchEvent<HTMLAnchorElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    animate(true, e.touches[0].clientY);
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    
+    if (isMobile) {
+      if (!isAnimating) {
+        animate(true, e.clientY);
+        // Delay the navigation to allow animation to complete
+        setTimeout(() => {
+          window.open(link, '_blank');
+        }, 600);
+      } else {
+        animate(false, e.clientY);
+      }
+    } else {
+      window.open(link, '_blank');
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLAnchorElement>) => {
+    // Don't prevent default here to allow click handling
+    const touch = e.touches[0];
+    animate(true, touch.clientY);
   };
 
   const handleTouchEnd = (e: React.TouchEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    // Use the last known touch position
-    const lastTouch = e.changedTouches[0];
-    animate(false, lastTouch.clientY);
+    // Don't prevent default here to allow click handling
+    const touch = e.changedTouches[0];
+    animate(false, touch.clientY);
   };
 
   return (
@@ -123,6 +144,7 @@ const Work: React.FC<WorkProps> = ({
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      onClick={handleClick}
       href={link} 
       target="_blank" 
       rel="noopener noreferrer"
