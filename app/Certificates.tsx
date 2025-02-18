@@ -19,7 +19,7 @@ const Certificates: React.FC = () => {
       id: 'cert1',
       link: "https://www.coursera.org/account/accomplishments/specialization/HLJUAPS49XLG",
       name: "Meta Front-End Developer Professional",
-      image: "/images/meta.webp",
+      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/meta-McN0j2H9cDvZZNHlXeehrc8IteQeII.webp",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "Meta Front-End Developer Certificate"
     },
@@ -27,7 +27,7 @@ const Certificates: React.FC = () => {
       id: 'cert2',
       link: "https://www.coursera.org/account/accomplishments/specialization/YAPAFNUL4QA2",
       name: "IBM Back-end JavaScript Developer Professional",
-      image: "/images/ibm.avif",
+      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/ibm-HSDe48i4RxTGnQ9DvNMIx0IB00YwYf.avif",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "IBM Back-end JavaScript Developer Certificate"
     },
@@ -35,7 +35,7 @@ const Certificates: React.FC = () => {
       id: 'cert3',
       link: "https://www.coursera.org/account/accomplishments/specialization/ZPTNMXAC7FQB",
       name: "Search Engine Optimization (SEO) Specializations",
-      image: "/images/certificate_3.webp",
+      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/certificate_3-gPcKxvzxWVky1QvifxeQL87JQyLGmB.webp",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "SEO Certificate"
     },
@@ -43,7 +43,7 @@ const Certificates: React.FC = () => {
       id: 'cert4',
       link: "https://example.com",
       name: "UI Fullstack With React js By -- Sudhakar Sharma Sir",
-      image: "/images/certificate_4.webp",
+      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/certificate_4-SQ0g6px9UDMpiRFOuxyov5IAUC2Fmc.webp",
       imageStyle: "w-[90px] h-[60px] sm:w-[105px] sm:h-[75px]",
       alt: "Example Project Certificate"
     },

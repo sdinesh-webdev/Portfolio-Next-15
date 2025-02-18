@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
             overlayClass="absolute top-0 left-0 w-full h-full bg-black -z-10 transform scale-y-0 origin-top"
           />
           <img
-            src="/images/Arrow.svg"
+            src="https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/Arrow-9uUXN36dmROFAkDANKH5WbeW9HbH0x.svg"
             alt="arrow" 
             className="absolute right-4 top-1/2 mr-6 w-10 h-10 font-bold arrow-icon"
             width={40}

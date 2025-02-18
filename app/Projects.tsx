@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
       id: 'proj1',
       link: "/Projects/Proj1",
       name: "Coming soon . . .",
-      imagePath: "/images/proj_1.webp",
+      imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/proj_1-nf95bIkFlrR5oVhDi2YS7142kyTY9h.webp",
       imageStyle: "w-32 h-24",
       alt: "Project 1"
     },
@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
       id: 'proj2',
       link: "/Projects/Proj2",
       name: "Coming soon . . .",
-      imagePath: "/images/proj_2.webp",
+      imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/proj_2-LsD0XqEoWnUZ33ne5Tolr39X9yZKws.webp",
       imageStyle: "w-32 h-24",
       alt: "Project 2"
     },
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
       id: 'proj3',
       link: "/Projects/Proj3",
       name: "Coming soon . . .",
-      imagePath: "/images/proj_3.webp",
+      imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/proj_3-MPywbekD0XEH4fdcteEDOVsndHweNW.webp",
       imageStyle: "w-32 h-24",
       alt: "Project 3"
     },
@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
       id: 'proj4',
       link: "/Projects/Proj4",
       name: "Coming soon . . .",
-      imagePath: "/images/proj_4.webp",
+      imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/proj_4-9nYbeLFBk1IYJIp1mmOkOchovsUF3D.webp",
       imageStyle: "w-32 h-24",
       alt: "Project 4"
     },
@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
       id: 'proj5',
       link: "/Projects/Proj5",
       name: "Coming soon . . .",
-      imagePath: "/images/proj_5.webp",
+      imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/proj_5-dU2OtTBEBO55bAnPUSATLXv3UTnmtY.webp",
       imageStyle: "w-32 h-24",
       alt: "Project 5"
     },
