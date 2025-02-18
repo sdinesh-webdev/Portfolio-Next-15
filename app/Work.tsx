@@ -151,13 +151,12 @@ const Work: React.FC<WorkProps> = ({
       className={`relative flex items-center ${containerClass}`}
     >
       {image && (
-        <div className={imageClass} ref={$imageContainer} style={{ overflow: 'hidden' }}>
+        <div className={`relative ${imageClass} responsive-image-container`} ref={$imageContainer} style={{ overflow: 'hidden' }}>
           <Image 
             src={image}
             alt={alt}
-            width={105}
-            height={75}
-            style={{ ...imageStyle, objectFit: 'cover' }}
+            layout="fill"
+            objectFit="cover"
             priority
           />
         </div>
