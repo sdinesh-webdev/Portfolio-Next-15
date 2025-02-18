@@ -18,7 +18,6 @@ export default function Page() {
       duration: 2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      smoothTouch: true,
       syncTouch: true, // Enable smooth scrolling on touch devices
       touchMultiplier: 4,
     });
