@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import useGsapReveal from './useGsapReveal';
 import Work from './Work';
 import './globals.css';
