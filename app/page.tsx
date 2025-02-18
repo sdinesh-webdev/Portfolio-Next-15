@@ -19,7 +19,7 @@ export default function Page() {
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       syncTouch: true, // Enable smooth scrolling on touch devices
-      touchMultiplier: 4,
+      touchMultiplier: 1,
     });
 
     function raf(time: number) {
