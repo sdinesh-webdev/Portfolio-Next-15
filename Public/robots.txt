@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sdineshkumar.vercel.app/sitemap.xml

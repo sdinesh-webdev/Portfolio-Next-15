@@ -29,12 +29,12 @@ export const Intro: React.FC = () => {
 
   return (
     <section id="svgintro" className="intro-section w-full m-0 p-4 sm:p-0">
-      <div className="svg-container w-full h-auto pb-16 sm:w-400px mb-[-15%] sm:mb-0">
+      <div className="svg-container w-full h-auto pb-16 sm:w-400px mb-[-15%] sm:mb-0 overflow-hidden">
         <svg  
           ref={svgRef}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 874.13 130"
-          className="w-full h-auto responsive-svg"
+          className="w-full h-auto responsive-svg overflow-clip"
           style={{ opacity: 0 }}
         >
           <title>S DINESH KUMAR</title>
