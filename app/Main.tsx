@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Intro } from './Intro';
 import Experience from './Experience';
 import Certificates from './Certificates';
@@ -7,6 +7,16 @@ import Contact from './Contact';
 import './globals.css';
 
 const Layout: React.FC = () => {
+  useEffect(() => {
+    // Scroll to top on component mount
+    window.scrollTo(0, 0);
+    
+    // Handle scroll restoration
+    if (typeof window !== 'undefined') {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
   return (
     <>
       <header className="header-section w-full">
