@@ -102,11 +102,11 @@ export const Intro: React.FC = () => {
       </div>
 
       <div className="intro text-left mt-4 sm:mt-0 font-matter" ref={introRef} style={{ opacity: 0 }}>
-        <strong className="pb-8 font-matter">My name is S Dinesh Kumar : Code Meets Creativity. <br /></strong>
+        <strong className="pb-8 font-matter">Hii.. My Self S Dinesh Kumar : Code Meets Creativity. <br /></strong>
         <p className="leading-relaxed max-sm:text-3xl max-sm:leading-loose font-matter">
           I&apos;m a{' '}
           <span className="bg-green-100 px-4 py-1 pb-2">
-            multidisciplinary
+            Multidisciplinary
           </span>{' '}
           full-stack developer from India who loves building websites that look Modern and work&apos;s{' '}
           <span className="bg-sky-100 px-4 py-1 pb-2">
@@ -114,7 +114,7 @@ export const Intro: React.FC = () => {
           </span>. <br />
           I enjoy learning new skills and using different tools to create simple,{' '}
           <span className="bg-purple-100 px-4 py-1 pb-2">
-            creative
+            Creative
           </span>{' '}
           solutions. <br />
           I also love working with others to build the{' '}
