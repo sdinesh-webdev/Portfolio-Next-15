@@ -27,7 +27,9 @@ export const metadata: Metadata = {
   keywords: "sdinesh, sdineshkumar, dinesh, dineshwebdev, Full-stack developer, Web development, uiux, S Dinesh Kumar, Portfolio",
   authors: [{ name: "S Dinesh Kumar" }],
   creator: "S Dinesh Kumar",
-
+  verification: {
+    google: 'DDVzs-nsZGPqw3CWoqfxeiG4PnI29qWgKV61YTVkmks',
+  },
   openGraph: {
     type: 'website',
     title: "S Dinesh Kumar - Full-stack Developer",
@@ -57,12 +59,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon.webp',
+        url: '/favicon.ico',
         type: 'image/webp',
         sizes: '32x32'
       },
       {
-        url: '/icon.webp',
+        url: '/favicon.ico',
         type: 'image/webp',
         sizes: '16x16'
       }
@@ -78,7 +80,7 @@ export const metadata: Metadata = {
     other: [
       {
         rel: 'mask-icon',
-        url: '/icon.webp'
+        url: '/favicon.ico',
       }
     ]
   },
