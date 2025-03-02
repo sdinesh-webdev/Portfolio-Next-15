@@ -22,9 +22,9 @@ const matter = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sdineshkumar.vercel.app'),
-  title: "S Dinesh Kumar - Full-stack Developer",
-  description: "Explore the portfolio of S Dinesh Kumar, a creative and full-stack developer specializing in crafting exceptional digital experiences.",
-  keywords: "sdinesh, sdineshkumar, dinesh, dineshwebdev, Full-stack developer, Web development, uiux, S Dinesh Kumar, Portfolio",
+  title: "SDineshKumar | Full-stack Developer Portfolio | Official Website",
+  description: "Official portfolio of SDineshKumar - Full-stack Developer from India. Specializing in React, Next.js, and modern web development. View my projects and professional work.",
+  keywords: "sdineshkumar, sdinesh kumar, dinesh kumar s, dinesh kumar portfolio, sdineshkumar developer, sdineshkumar portfolio, sdineshkumar website, full stack developer india",
   authors: [{ name: "S Dinesh Kumar" }],
   creator: "S Dinesh Kumar",
   verification: {
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    title: "S Dinesh Kumar - Full-stack Developer",
-    description: "Discover the work of S Dinesh Kumar, a full-stack developer with a passion for creating dynamic and modern engaging web applications",
+    title: "S Dinesh Kumar | Full-stack Developer & UI/UX Designer",
+    description: "Portfolio of S Dinesh Kumar - Specialized in React, Next.js, and modern full-stack development. Explore my projects and professional work in web development.",
     url: 'https://sdineshkumar.vercel.app',
     siteName: "S Dinesh Kumar Portfolio",
     images: [{
@@ -83,6 +83,36 @@ export const metadata: Metadata = {
         url: '/favicon.ico',
       }
     ]
+  },
+  alternates: {
+    canonical: 'https://sdineshkumar.vercel.app',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  other: {
+    'google-site-verification': 'DDVzs-nsZGPqw3CWoqfxeiG4PnI29qWgKV61YTVkmks',
+    structured_data: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'S Dinesh Kumar',
+      url: 'https://sdineshkumar.vercel.app',
+      sameAs: [
+        'https://github.com/sdinesh-kumar',
+        'https://linkedin.com/in/sdineshkumar',
+      ],
+      jobTitle: 'Full-stack Developer',
+      image: 'https://sdineshkumar.vercel.app/profile.webp',
+      description: 'Full-stack Developer specializing in React and Next.js',
+    })
   },
 };
 

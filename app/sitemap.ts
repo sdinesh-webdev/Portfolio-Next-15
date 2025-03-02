@@ -11,7 +11,7 @@ interface RouteConfig {
 const routes: RouteConfig[] = [
   {
     path: '',
-    changeFrequency: 'monthly',
+    changeFrequency: 'daily',
     priority: 1
   },
   {
@@ -21,12 +21,12 @@ const routes: RouteConfig[] = [
   },
   {
     path: 'about',
-    changeFrequency: 'monthly',
-    priority: 0.5
+    changeFrequency: 'weekly',
+    priority: 0.8
   },
   {
     path: 'contact',
-    changeFrequency: 'monthly',
+    changeFrequency: 'weekly',
     priority: 0.5
   }
 ]
@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [{
       url: baseUrl,
       lastModified: new Date().toISOString(),
-      changeFrequency: 'monthly' as ChangeFreq,
+      changeFrequency: 'daily' as ChangeFreq,
       priority: 1,
     }]
   }

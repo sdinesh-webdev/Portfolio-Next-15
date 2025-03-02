@@ -5,20 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: [
-          '/',
-          '/about',
-          '/projects',
-          '/contact',
-          '/blog'
-        ],
-        disallow: [
-          '/api/',
-          '/private/',
-          '/admin/',
-          '/*.json$',
-          '/*?*'  // Prevent crawling of URL parameters
-        ]
+        allow: '/',
+        crawlDelay: 1,
       }
     ],
     sitemap: 'https://sdineshkumar.vercel.app/sitemap.xml',
