@@ -26,6 +26,7 @@ const Layout: React.FC = () => {
         <Experience />
         <Certificates />
         <Projects />
+  
       </main>
       <footer className="footer-section w-full">
         <Contact />

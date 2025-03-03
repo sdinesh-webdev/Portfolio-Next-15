@@ -31,25 +31,16 @@ const routes: RouteConfig[] = [
   }
 ]
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sdineshkumar.vercel.app'
 
-  try {
-    return routes.map(({ path, changeFrequency, priority }) => ({
-      url: `${baseUrl}${path ? `/${path}` : ''}`,
-      lastModified: new Date().toISOString(),
-      changeFrequency,
-      priority,
-    }))
-  } catch (error) {
-    console.error('Error generating sitemap:', error)
-    // Return at least the homepage if there's an error
-    return [{
-      url: baseUrl,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'daily' as ChangeFreq,
-      priority: 1,
-    }]
-  }
+  // Next.js will automatically generate the correct XML structure with namespaces
+  // We just need to return the correct data structure
+  return routes.map(({ path, changeFrequency, priority }) => ({
+    url: `${baseUrl}${path ? `/${path}` : ''}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency,
+    priority,
+  }))
 }
 
