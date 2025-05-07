@@ -17,24 +17,24 @@ const Projects: React.FC = () => {
   const workItems: WorkItem[] = [
     {
       id: 'proj1',
-      link: "/Projects/Proj1",
-      name: "Coming soon . . .",
+      link: "https://github.com/sdinesh-webdev/Summary-AI.git",
+      name: "AI Summarizer .",
       imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/proj_1-nf95bIkFlrR5oVhDi2YS7142kyTY9h.webp",
       imageStyle: "w-32 h-24",
-      alt: "Project 1"
+      alt: "Project-AI Summary"
     },
     {
       id: 'proj2',
-      link: "/Projects/Proj2",
-      name: "Coming soon . . .",
-      imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/proj_2-LsD0XqEoWnUZ33ne5Tolr39X9yZKws.webp",
+      link: "https://awwards-site-phi.vercel.app/",
+      name: "Awwwards Gaming Site .",
+      imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/awwards-gasming-site-iU64lfZPj4xw6PBtQdJh2dnpHnBK81.webp",
       imageStyle: "w-32 h-24",
-      alt: "Project 2"
+      alt: "Project-Awwwards Gaming Site"
     },
     {
       id: 'proj3',
       link: "/Projects/Proj3",
-      name: "Coming soon . . .",
+      name: "🦾😉 Work In Development . . .",
       imagePath: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/proj_3-MPywbekD0XEH4fdcteEDOVsndHweNW.webp",
       imageStyle: "w-32 h-24",
       alt: "Project 3"
