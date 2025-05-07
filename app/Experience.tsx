@@ -23,8 +23,8 @@ const Experience: React.FC = () => {
   const experience = [
     {
       startDate: "Feb 2023",
-      endDate: 'June 2023',
-      title: 'SEO & React js Developer Internship',
+      endDate: 'Jan 2024',
+      title: 'SEO & React js Developer',
       company: 'NXG Solutions'
     },
   ];
