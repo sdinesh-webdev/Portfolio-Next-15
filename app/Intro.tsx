@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 export const Intro: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
+  const experience = 1; // years of experience
 
   useEffect(() => {
     const svg = svgRef.current;
@@ -108,7 +109,7 @@ export const Intro: React.FC = () => {
           <span className="bg-green-100 px-4 py-1 pb-2">
             Multidisciplinary
           </span>{' '}
-          full-stack developer from India who loves building websites that look Modern and work&apos;s{' '}
+          full-stack developer from India with {experience} year{experience > 1 ? 's' : ''} of experience who loves building websites that look Modern and work&apos;s{' '}
           <span className="bg-sky-100 px-4 py-1 pb-2">
             Awesome
           </span>. <br />

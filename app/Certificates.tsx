@@ -41,7 +41,7 @@ const Certificates: React.FC = () => {
     },
     {
       id: 'cert4',
-      link: "https://example.com",
+      link: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/S_DINESH_KUMAR_NareshIT-certificate-e-1oa1BTZP6I9iaAqfoOPFsKoawoVQAi.pdf",
       name: "UI Fullstack With React js -- NareshIT_HYD",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/certificate_4-SQ0g6px9UDMpiRFOuxyov5IAUC2Fmc.webp",
       imageStyle: "w-[145px] h-[64px] sm:w-[105px] sm:h-[75px]",
