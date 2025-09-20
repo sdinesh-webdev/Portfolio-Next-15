@@ -29,8 +29,8 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 ">
-      <div className="bg-white p-8 w-full max-w-md flex flex-col items-center text-center
+    <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+      <div className="bg-white p-6 sm:p-8 w-full max-w-md flex flex-col items-center text-center
                     border-[3px] border-black
                     shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)]
                     hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)]
@@ -42,18 +42,18 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
                     after:bg-[#00FF9C]
                     after:opacity-10
                     after:z-[-1]">
-        <p className="text-[18px] font-medium mb-4">
+        <p className="text-base sm:text-lg font-medium mb-3 sm:mb-4">
           For an{' '}
           <span className="bg-purple-200 py-1">
             Awesome Experience
           </span>
           , please view on 🖥️ Desktop.
         </p>
-        <p className="text-2xl  font-medium text-green-600 mb-8">Please continue. Thank you!</p>
+        <p className="text-xl sm:text-2xl font-medium text-green-600 mb-6 sm:mb-8">Please continue. Thank you!</p>
         <div className="flex justify-center w-full">
           <button 
             onClick={handleClick} 
-            className="bg-[#00FF9C] text-black font-bold text-lg px-8 py-3 
+            className="bg-[#00FF9C] text-black font-bold text-base sm:text-lg px-6 sm:px-8 py-2 sm:py-3 
                      border-2 border-black
                      shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] 
                      hover:shadow-none

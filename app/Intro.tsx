@@ -103,13 +103,13 @@ export const Intro: React.FC = () => {
       </div>
 
       <div className="intro text-left mt-4 sm:mt-0 font-matter" ref={introRef} style={{ opacity: 0 }}>
-        <strong className="pb-8 font-matter">Hii.. My Self S Dinesh Kumar : Code Meets Creativity. <br /></strong>
-        <p className="leading-relaxed max-sm:text-3xl max-sm:leading-loose font-matter">
+        <strong className="pb-8 font-matter font-extrabold">Hey.. My Self S Dinesh Kumar : Code Meets Creativity. <br /></strong>
+        <p className="leading-relaxed max-sm:text-3xl max-sm:leading-loose font-matter font-medium text-4xl">
           I&apos;m a{' '}
           <span className="bg-green-100 px-4 py-1 pb-2">
             Multidisciplinary
           </span>{' '}
-          full-stack developer from India with {experience} year{experience > 1 ? 's' : ''} of experience who loves building websites that look Modern and work&apos;s{' '}
+          full-stack developer from India with a  year{experience > 1 ? 's' : ''} of experience who loves building websites that look Modern and work&apos;s{' '}
           <span className="bg-sky-100 px-4 py-1 pb-2">
             Awesome
           </span>. <br />

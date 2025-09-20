@@ -8,11 +8,13 @@
   box-sizing: border-box;
 }
 
+
 @layer base {
   html {
     font-size: 10px;
     padding: 5%;
     scroll-behavior: smooth;
+     height: 2980px;
   }
 
   body {
@@ -22,6 +24,13 @@
     font-size: 1.6rem;
     font-weight: 300;
     @apply bg-white text-black;
+    height: 2980pxx;
+  }
+
+  @media screen and (max-width: 768px) {
+    html {
+      height: 2742px;
+    }
   }
 }
 

@@ -51,7 +51,7 @@ const Certificates: React.FC = () => {
 
   return (
     <section className="flex flex-col w-full opacity-0" ref={certificatesRef}>
-      <h1 className="text-start mt-24 pb-6 mb-4 text-6xl md:mt-20 md:mb-6 md:text-8xl font-medium">
+      <h1 className="text-start mt-24 pb-6 mb-4 text-6xl md:mt-20 md:mb-6 md:text-9xl font-medium">
         Professional Certificates
       </h1>
       <div className="certificates-list">

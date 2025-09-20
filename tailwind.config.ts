@@ -12,6 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+        fontSize: {
+      clampH1: 'clamp(2rem, 4.5vw, 72px)',
+      clampAward: 'clamp(1.5rem, 3.5vw, 5rem)',
+    },
+      borderRadius: {
+    inherit: 'inherit',
+  },
     },
   },
   plugins: [],

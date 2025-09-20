@@ -62,7 +62,7 @@ const Projects: React.FC = () => {
       <h1 className="projects-heading text-start text-6xl mb-4 mt-24 md:mt-20 md:mb-6 md:text-8xl font-medium">
         Projects
       </h1>
-      <p className='projects-description text-start font-light pb-14 pt-2'>
+      <p className='projects-description text-start  pb-14 pt-2  '>
         Projects are in development. Their listing will be available soon.
       </p>
       <div className="projects-grid grid grid-cols-1 md:grid-cols-2 gap-x-4">

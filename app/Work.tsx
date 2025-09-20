@@ -74,7 +74,7 @@ const Work: React.FC<WorkProps> = ({
       if ($link.current) {
         gsap.to($link.current, {
           x: 0,
-          color: '#000',
+          color: '#000 ',
           duration: 0.3,
           ease: 'power3.out'
         });
@@ -95,6 +95,7 @@ const Work: React.FC<WorkProps> = ({
         });
       }
     }
+    
     setIsAnimating(isEntering);
   }, []);
 
