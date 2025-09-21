@@ -1,5 +1,5 @@
 import React from 'react';
-import useGsapReveal from './useGsapReveal';
+import useGsapReveal from '../useGsapReveal';
 
 interface ExperienceItemProps {
   startDate: string;

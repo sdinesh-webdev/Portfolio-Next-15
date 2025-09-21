@@ -1,7 +1,7 @@
 import React from 'react';
-import useGsapReveal from './useGsapReveal';
-import Work from './Work';
-import './globals.css';
+import useGsapReveal from '../useGsapReveal';
+import Work from '../Work';
+// import './globals.css';
 
 interface WorkItem {
   id: string;

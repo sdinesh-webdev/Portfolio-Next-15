@@ -96,7 +96,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'profile',
     title: "S Dinesh Kumar | Top-Rated Full-Stack Developer | MERN, React, Next.js Expert Available for Hire",
-    description: "🏆 Award-winning Full-Stack Developer with proven track record. 100+ successful projects delivered. Expert in MERN Stack, React.js, Next.js. Available for hire in 2024. Free consultation available!",
+    description: "🏆 Full-Stack Developer with proven track record. Expert in MERN Stack, React.js, Next.js. Available for hire in 2025-26. Free consultation available!",
     url: siteConfig.domain,
     siteName: "S Dinesh Kumar - Expert Full-Stack Developer Portfolio",
     locale: 'en_US',

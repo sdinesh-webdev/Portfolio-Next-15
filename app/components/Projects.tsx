@@ -1,6 +1,6 @@
 import React from 'react';
-import Work from './Work';
-import useGsapReveal from './useGsapReveal';
+import Work from '../Work';
+import useGsapReveal from '../useGsapReveal';
 
 interface WorkItem {
   id: string;

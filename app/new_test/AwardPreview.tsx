@@ -25,9 +25,18 @@ const AwardPreview: React.FC<AwardPreviewProps> = ({
 }) => {
   const previewRef = React.useRef<HTMLDivElement>(null);
   const [images, setImages] = React.useState<ImageItem[]>([]);
+  const [isClient, setIsClient] = React.useState(false);
+
+  // Set client-side flag
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const loadImage = React.useCallback(async (index: number) => {
-    const formats = ["webp","png", "jpg", "jpeg"];
+    // Only run on client side
+    if (typeof window === 'undefined') return null;
+    
+    const formats = ["webp", "png", "jpg", "jpeg"];
 
     for (const format of formats) {
       try {
@@ -49,65 +58,74 @@ const AwardPreview: React.FC<AwardPreviewProps> = ({
   }, []);
 
   React.useEffect(() => {
-    if (activeIndex !== null) {
-      loadImage(activeIndex).then((imgSrc) => {
-        if (imgSrc) {
-          const newImage = { id: Date.now(), src: imgSrc };
-          setImages((prev) => {
-            if (prev.length >= 2) {
-              // remove old images smoothly
-              const oldImages = prev.slice(0, -1);
-              oldImages.forEach((img) => {
-                const element = document.getElementById(`preview-${img.id}`);
-                if (element) {
-                  gsap.to(element, {
-                    scale: 0,
-                    duration: 0.4,
-                    ease: "power2.out",
-                    // Remove the manual DOM removal here!
-                    // onComplete: () => element.remove(),
-                  });
-                }
-              });
-              return [prev[prev.length - 1], newImage];
-            }
-            return [...prev, newImage];
+    if (!isClient || activeIndex === null) return;
+
+    loadImage(activeIndex).then((imgSrc) => {
+      if (imgSrc) {
+        const newImage = { id: Date.now(), src: imgSrc };
+        setImages((prev) => {
+          if (prev.length >= 2) {
+            // remove old images smoothly
+            const oldImages = prev.slice(0, -1);
+            oldImages.forEach((img) => {
+              const element = document.getElementById(`preview-${img.id}`);
+              if (element) {
+                gsap.to(element, {
+                  scale: 0,
+                  duration: 0.4,
+                  ease: "power2.out",
+                  // Remove the manual DOM removal here!
+                  // onComplete: () => element.remove(),
+                });
+              }
+            });
+            return [prev[prev.length - 1], newImage];
+          }
+          return [...prev, newImage];
+        });
+      }
+    });
+  }, [activeIndex, loadImage, isClient]);
+
+  React.useEffect(() => {
+    if (!isClient || !awardsListRef.current) return;
+
+    const rect = awardsListRef.current.getBoundingClientRect();
+    const isOutside =
+      mousePosition.x < rect.left ||
+      mousePosition.x > rect.right ||
+      mousePosition.y < rect.top ||
+      mousePosition.y > rect.bottom;
+
+    if (isOutside) {
+      images.forEach((img) => {
+        const element = document.getElementById(`preview-${img.id}`);
+        if (element) {
+          gsap.to(element, {
+            scale: 0,
+            duration: 0.4,
+            ease: "power2.out",
+            onComplete: () =>
+              setImages((prev) => prev.filter((i) => i.id !== img.id)),
           });
         }
       });
     }
-  }, [activeIndex, loadImage]);
+  }, [mousePosition, images, awardsListRef, isClient]);
 
-  React.useEffect(() => {
-    if (awardsListRef.current) {
-      const rect = awardsListRef.current.getBoundingClientRect();
-      const isOutside =
-        mousePosition.x < rect.left ||
-        mousePosition.x > rect.right ||
-        mousePosition.y < rect.top ||
-        mousePosition.y > rect.bottom;
-
-      if (isOutside) {
-        images.forEach((img) => {
-          const element = document.getElementById(`preview-${img.id}`);
-          if (element) {
-            gsap.to(element, {
-              scale: 0,
-              duration: 0.4,
-              ease: "power2.out",
-              onComplete: () =>
-                setImages((prev) => prev.filter((i) => i.id !== img.id)),
-            });
-          }
-        });
-      }
-    }
-  }, [mousePosition, images, awardsListRef]);
+  // Don't render anything on server side to avoid hydration mismatch
+  if (!isClient) {
+    return (
+      <div className="award-preview relative w-[250px] h-[200px] overflow-hidden">
+        {/* Empty placeholder for SSR */}
+      </div>
+    );
+  }
 
   return (
     <div
       ref={previewRef}
-      className="award-preview relative w-[250px] h-[200px] overflow-hidden "
+      className="award-preview relative w-[250px] h-[200px] overflow-hidden"
     >
       {images.map((img) => (
         <NextImage

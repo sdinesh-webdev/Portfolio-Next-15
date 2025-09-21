@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import Work from './Work';
-import './globals.css';
-import useGsapReveal from './useGsapReveal';
+import Work from '../Work';
+// import './globals.css';
+import useGsapReveal from '../useGsapReveal';
 import gsap from 'gsap';
 
 interface WorkItem {

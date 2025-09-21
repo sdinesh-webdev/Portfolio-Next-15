@@ -24,9 +24,14 @@ interface AwardProps {
 
 // Helper function to get current award height from CSS custom property
 const getAwardHeight = (): number => {
+  // Check if we're in the browser environment
+  if (typeof window === 'undefined' || typeof document === 'undefined') {
+    return 100; // fallback value for SSR
+  }
+  
   const root = document.documentElement;
   const awardHeight = getComputedStyle(root).getPropertyValue('--award-height');
-  return parseInt(awardHeight.replace('px', '')) || 100; // fallback to 80px
+  return parseInt(awardHeight.replace('px', '')) || 100; // fallback to 100px
 };
 
 // Dynamic position calculator based on current award height
@@ -42,10 +47,12 @@ const getPositions = () => {
 const Award: React.FC<AwardProps> = ({ award, index, setActiveAward, isActive, mousePosition }) => {
   const wrapperRef = React.useRef<HTMLDivElement>(null);
   const awardRef = React.useRef<HTMLDivElement>(null);
-  const [currentPosition, setCurrentPosition] = React.useState(() => getPositions().TOP);
+  const [currentPosition, setCurrentPosition] = React.useState(-200); // Default fallback value
+  const [isClient, setIsClient] = React.useState(false);
 
-  // Update positions when component mounts or height changes
+  // Set client-side flag and initialize positions
   React.useEffect(() => {
+    setIsClient(true);
     const positions = getPositions();
     setCurrentPosition(positions.TOP);
     
@@ -55,11 +62,13 @@ const Award: React.FC<AwardProps> = ({ award, index, setActiveAward, isActive, m
     }
   }, []);
 
-  // Listen for CSS custom property changes (optional - for real-time updates)
+  // Listen for window resize events to update positions
   React.useEffect(() => {
+    if (!isClient) return;
+
     const handleResize = () => {
       const positions = getPositions();
-      if (currentPosition === getPositions().TOP) {
+      if (currentPosition <= positions.TOP) {
         setCurrentPosition(positions.TOP);
         if (wrapperRef.current) {
           gsap.set(wrapperRef.current, { y: positions.TOP });
@@ -69,9 +78,11 @@ const Award: React.FC<AwardProps> = ({ award, index, setActiveAward, isActive, m
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [currentPosition]);
+  }, [currentPosition, isClient]);
 
   const handleMouseEnter = React.useCallback((e: React.MouseEvent) => {
+    if (!isClient) return;
+    
     setActiveAward(index);
     const positions = getPositions();
     
@@ -88,9 +99,11 @@ const Award: React.FC<AwardProps> = ({ award, index, setActiveAward, isActive, m
         ease: "power2.out",
       });
     }
-  }, [index, currentPosition, setActiveAward]);
+  }, [index, currentPosition, setActiveAward, isClient]);
 
   const handleMouseLeave = React.useCallback((e: React.MouseEvent) => {
+    if (!isClient) return;
+    
     setActiveAward(null);
     const positions = getPositions();
     
@@ -106,7 +119,7 @@ const Award: React.FC<AwardProps> = ({ award, index, setActiveAward, isActive, m
       duration: 0.4,
       ease: "power2.out",
     });
-  }, [setActiveAward]);
+  }, [setActiveAward, isClient]);
 
   const handleClick = React.useCallback(() => {
     if (award.link) {
