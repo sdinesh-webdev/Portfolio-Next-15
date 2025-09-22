@@ -5,12 +5,13 @@ import "./globals.css";
 const matter = localFont({
   src: [
     {
-      path: '../Public/Matter-Light.woff2',
+      path: '../Public/fonts/Matter-Light.woff2',
       weight: '300',
       style: 'normal',
+      
     },
     {
-      path: '../Public/Matter-Medium.woff2',
+      path: '../Public/fonts/Matter-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
@@ -142,32 +143,10 @@ export const metadata: Metadata = {
   },
 
   // Enhanced icons configuration
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' }
-    ],
-    shortcut: '/favicon.ico',
-    apple: [
-      { url: '/apple-touch-icon-57x57.png', sizes: '57x57', type: 'image/png' },
-      { url: '/apple-touch-icon-114x114.png', sizes: '114x114', type: 'image/png' },
-      { url: '/apple-touch-icon-72x72.png', sizes: '72x72', type: 'image/png' },
-      { url: '/apple-touch-icon-144x144.png', sizes: '144x144', type: 'image/png' },
-      { url: '/apple-touch-icon-60x60.png', sizes: '60x60', type: 'image/png' },
-      { url: '/apple-touch-icon-120x120.png', sizes: '120x120', type: 'image/png' },
-      { url: '/apple-touch-icon-76x76.png', sizes: '76x76', type: 'image/png' },
-      { url: '/apple-touch-icon-152x152.png', sizes: '152x152', type: 'image/png' },
-      { url: '/apple-touch-icon-180x180.png', sizes: '180x180', type: 'image/png' }
-    ],
-    other: [
-      {
-        rel: 'mask-icon',
-        url: '/safari-pinned-tab.svg',
-        color: '#000000'
-      }
-    ]
-  },
+icons: {
+  icon: '/favicon-32x32.png',
+  shortcut: '/favicon-32x32.png',
+},
 
   // Enhanced canonical and alternate URLs
   alternates: {
@@ -588,12 +567,16 @@ export default function RootLayout({
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         
-        {/* Manifest for PWA */}
-        <link rel="manifest" href="/site.webmanifest" />
+      
+     
+         <link 
+          rel="dns-prefetch" 
+          href="https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com" 
+        />
       </head>
       <body 
         suppressHydrationWarning={true} 

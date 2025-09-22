@@ -1,7 +1,8 @@
-import React from 'react';
-// import './globals.css';
 
-export const OptimizedLoading: React.FC = () => {
+import React from 'react';
+
+// Use default export instead of named export
+const OptimizedLoading: React.FC = () => {
   return (
     <div className="optimized-loading-container">
       <div className="loading-content">
@@ -11,3 +12,5 @@ export const OptimizedLoading: React.FC = () => {
     </div>
   );
 };
+
+export default OptimizedLoading;

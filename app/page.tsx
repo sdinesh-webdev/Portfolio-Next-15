@@ -1,124 +1,122 @@
-"use client";
-import { useState, useEffect } from 'react';
-import Lenis from 'lenis';
-import { OptimizedLoading } from './components/OptimizedLoading';
-import Popup from './Popup';
+import { Metadata } from 'next';
+import { Suspense } from 'react';
 import { IntroServer } from './components/IntroServer';
 import Experience from './components/Experience';
 import Certificates from './components/Certificates';
-// import Projects from './components/Projects';
 import Awards from './new_test/Awards';
 import Contact from './components/Contact';
-import './globals.css';
-import { inject } from '@vercel/analytics';
+import ClientEnhancements from './components/ClientEnhancements';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import './globals.css';
 
-export default function Page() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [showPopup, setShowPopup] = useState(false);
+// Generate metadata for SEO
+export const metadata: Metadata = {
+  title: 'S Dinesh Kumar | Expert Full-Stack Developer',
+  description: 'Professional portfolio showcasing expertise in MERN Stack, React.js, Next.js development',
+};
 
-  useEffect(() => {
-    // Initialize Lenis scroll immediately
-    const lenis = new Lenis({
-      duration: 2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      touchMultiplier: 2,
-    });
+// Loading skeleton components for better UX
+function ExperienceLoading() {
+  return (
+    <div className="experience-section animate-pulse">
+      <div className="h-20 bg-gray-200 rounded mb-6 w-1/2"></div>
+      <div className="space-y-4">
+        <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+        <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+      </div>
+    </div>
+  );
+}
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+function CertificatesLoading() {
+  return (
+    <div className="certificates-section animate-pulse">
+      <div className="h-20 bg-gray-200 rounded mb-6 w-2/3"></div>
+      <div className="space-y-6">
+        {[1, 2, 3, 4].map((i) => (
+          <div key={i} className="flex items-center space-x-4 border-b pb-4">
+            <div className="w-24 h-16 bg-gray-200 rounded"></div>
+            <div className="flex-1 h-6 bg-gray-200 rounded"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
-    // Fast loading - only wait for DOM ready and critical resources
-    const handleLoading = async () => {
-      // Wait for DOM to be ready
-      if (document.readyState === 'loading') {
-        await new Promise(resolve => {
-          document.addEventListener('DOMContentLoaded', resolve);
-        });
-      }
+function AwardsLoading() {
+  return (
+    <div className="awards-section animate-pulse">
+      <div className="h-20 bg-gray-200 rounded mb-6 w-1/3"></div>
+      <div className="space-y-4">
+        <div className="h-4 bg-gray-200 rounded w-full"></div>
+        <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+      </div>
+    </div>
+  );
+}
 
-      // Preload only critical images
-      const criticalImages = [
-        'https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/meta-McN0j2H9cDvZZNHlXeehrc8IteQeII.webp',
-      ];
+function ContactLoading() {
+  return (
+    <div className="contact-section animate-pulse">
+      <div className="h-20 bg-gray-200 rounded mb-6 w-1/4"></div>
+      <div className="space-y-6">
+        {[1, 2, 3, 4].map((i) => (
+          <div key={i} className="flex items-center justify-between border-b pb-4">
+            <div className="h-6 bg-gray-200 rounded w-1/2"></div>
+            <div className="w-6 h-6 bg-gray-200 rounded"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
-      // Load critical images in parallel (don't wait for all)
-      const imagePromises = criticalImages.map(src => {
-        return new Promise((resolve) => {
-          const img = new Image();
-          img.onload = resolve;
-          img.onerror = resolve; // Don't fail on image errors
-          img.src = src;
-          // Resolve after 200ms even if image hasn't loaded
-          setTimeout(resolve, 200);
-        });
-      });
-
-      // Wait for fastest response (DOM ready or first image)
-      await Promise.race([
-        Promise.all(imagePromises),
-        new Promise(resolve => setTimeout(resolve, 100)) // Maximum 100ms wait
-      ]);
-
-      setIsLoading(false);
-      
-      // Check for popup after loading is complete
-      setTimeout(() => {
-        const hasSeenPopup = localStorage.getItem('hasSeenMobilePopup');
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        if (!hasSeenPopup && isMobile) {
-          setShowPopup(true);
-        }
-      }, 200);
-    };
-
-    handleLoading();
-    inject();
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
-
-  // Render main content immediately, show loading overlay only briefly
+// Main Server Component
+export default function HomePage() {
   return (
     <>
-      {/* Main content renders immediately */}
-      <div className={`main-app ${isLoading ? 'loading' : 'loaded'}`}>
-        <a 
-          href="#main-content" 
-          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50 rounded-br-md transition-all duration-200"
-        >
-          Skip to main content
-        </a>
-        
-        <header role="banner" className="header-section">
-          <IntroServer/>
-        </header>
-        
-        <main 
-          id="main-content" 
-          className="main-section w-full h-dvh" 
-          role="main"
-          aria-label="Portfolio content showcasing S Dinesh Kumar's professional work"
-        >
+      {/* Skip to main content for accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50 rounded-br-md transition-all duration-200"
+      >
+        Skip to main content
+      </a>
+      
+      {/* Header - Server Rendered */}
+      <header role="banner" className="header-section">
+        <IntroServer />
+      </header>
+      
+      {/* Main Content - Server Rendered with Suspense boundaries */}
+      <main 
+        id="main-content" 
+        className="main-section w-full h-dvh" 
+        role="main"
+        aria-label="Portfolio content showcasing S Dinesh Kumar's professional work"
+      >
+        <Suspense fallback={<ExperienceLoading />}>
           <section aria-labelledby="experience-heading" className="experience-section">
             <Experience />
           </section>
-          
+        </Suspense>
+        
+        <Suspense fallback={<CertificatesLoading />}>
           <section aria-labelledby="certificates-heading" className="certificates-section">
             <Certificates />
           </section>
-          
+        </Suspense>
+        
+        <Suspense fallback={<AwardsLoading />}>
           <section aria-labelledby="awards-heading" className="awards-section">
             <Awards />
           </section>
-        </main>
-        
+        </Suspense>
+      </main>
+      
+      {/* Footer - Server Rendered */}
+      <Suspense fallback={<ContactLoading />}>
         <footer 
           className="footer-section w-full mt-[900px] max-sm:mt-[741px]" 
           role="contentinfo"
@@ -126,20 +124,13 @@ export default function Page() {
         >
           <Contact />
         </footer>
-        
-        <SpeedInsights />
-      </div>
-
-      {/* Minimal loading overlay */}
-      {isLoading && <OptimizedLoading />}
+      </Suspense>
       
-      {/* Popup after loading */}
-      {showPopup && (
-        <Popup 
-          onClose={() => setShowPopup(false)} 
-          aria-label="Welcome popup with additional information"
-        />
-      )}
+      {/* Client-side Enhancements - Hydrated after initial render */}
+      <ClientEnhancements />
+      
+      {/* Analytics - Client-side only */}
+      <SpeedInsights />
     </>
   );
 }

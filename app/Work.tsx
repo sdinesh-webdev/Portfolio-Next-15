@@ -1,3 +1,4 @@
+'use client';
 import React, { useRef, useCallback, useState } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
@@ -156,8 +157,9 @@ const Work: React.FC<WorkProps> = ({
           <Image 
             src={image}
             alt={alt}
-            layout="fill"
-            objectFit="cover"
+            fill
+            sizes="(max-width: 640px) 105px, (max-width: 1024px) 145px, 125px"
+            style={{ objectFit: 'cover' }}
             priority
           />
         </div>

@@ -1,5 +1,5 @@
+// app/components/Popup.tsx - Fixed default export
 import React, { useEffect, useState } from 'react';
-import './globals.css';
 
 interface PopupProps {
   onClose: () => void;
@@ -47,7 +47,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
           <span className="bg-purple-200 py-1">
             Awesome Experience
           </span>
-          , please view on 🖥️ Desktop.
+          , please view on desktop.
         </p>
         <p className="text-xl sm:text-2xl font-medium text-green-600 mb-6 sm:mb-8">Please continue. Thank you!</p>
         <div className="flex justify-center w-full">
