@@ -56,7 +56,7 @@ const Awards: React.FC = React.memo(() => {
         activeIndex={activeAward}
         mousePosition={mousePosition}
         awardsListRef={awardsListRef}
-        awards={awards}
+        
       />
     </>
   );

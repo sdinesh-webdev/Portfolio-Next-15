@@ -11,7 +11,6 @@ interface AwardPreviewProps {
   activeIndex: number | null;
   mousePosition: MousePosition;
   awardsListRef: React.RefObject<HTMLDivElement>;
-  awards: Array<{ image?: string; name?: string }>; // Add awards prop
 }
 
 interface ImageItem {
@@ -19,11 +18,13 @@ interface ImageItem {
   src: string;
 }
 
+// Import awards data directly to avoid prop drilling
+import { awards } from './data';
+
 const AwardPreview: React.FC<AwardPreviewProps> = ({
   activeIndex,
   mousePosition,
   awardsListRef,
-  awards,
 }) => {
   const previewRef = React.useRef<HTMLDivElement>(null);
   const [images, setImages] = React.useState<ImageItem[]>([]);
@@ -35,10 +36,14 @@ const AwardPreview: React.FC<AwardPreviewProps> = ({
   }, []);
 
   React.useEffect(() => {
-    if (!isClient || activeIndex === null || !awards[activeIndex]?.image) return;
+    if (!isClient || activeIndex === null) return;
+    
+    // Add null check and type guard
+    const currentAward = awards[activeIndex];
+    if (!currentAward?.image) return;
 
-    const imgSrc = awards[activeIndex].image;
-    const newImage = { id: Date.now(), src: imgSrc };
+    const imgSrc = currentAward.image;
+    const newImage: ImageItem = { id: Date.now(), src: imgSrc };
     
     setImages((prev) => {
       if (prev.length >= 2) {
@@ -58,7 +63,7 @@ const AwardPreview: React.FC<AwardPreviewProps> = ({
       }
       return [...prev, newImage];
     });
-  }, [activeIndex, awards, isClient]);
+  }, [activeIndex, isClient]);
 
   React.useEffect(() => {
     if (!isClient || !awardsListRef.current) return;

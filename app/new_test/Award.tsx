@@ -11,7 +11,8 @@ interface AwardType {
   type: string;
   project: string;
   label: string;
-  link: string;
+  image: string;
+  link?: string;
 }
 
 interface AwardProps {
