@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /api/og/*
 
 Sitemap: https://sdineshkumar.vercel.app/sitemap.xml

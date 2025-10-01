@@ -9,7 +9,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
   const [shouldShow, setShouldShow] = useState(false);
 
   useEffect(() => {
-    const hasSeenPopup = localStorage.getItem('hasSeenMobilePopup');
+    const hasSeenPopup = sessionStorage.getItem('hasSeenMobilePopup');
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     
     if (!hasSeenPopup && isMobile) {
