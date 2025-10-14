@@ -6,6 +6,8 @@
 ![GSAP](https://img.shields.io/badge/GSAP-3.12-green?style=for-the-badge)
 ![PageSpeed](https://img.shields.io/badge/PageSpeed-95+-success?style=for-the-badge)
 
+<img width="1057" height="844" alt="seo-99-desktop" src="https://github.com/user-attachments/assets/7c1ae373-a6b0-4d18-add4-e97828667e18" />
+
 > Professional portfolio website featuring cutting-edge animations, optimal SEO, and exceptional performance.
 
 ## 🎯 Overview
