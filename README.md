@@ -1,4 +1,4 @@
-# 🚀 SDinesh Portfolio - Award-Winning Interactive Experience
+# S Dinesh Portfolio - Award-Winning Interactive Experience
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.2-black?style=for-the-badge&logo=next.js)
 ![React](https://img.shields.io/badge/React-19.0-blue?style=for-the-badge&logo=react)
