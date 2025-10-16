@@ -9,11 +9,11 @@ export const awards = [
     link: "https://awwards-site-phi.vercel.app/",
     image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img1.webp"
   },
-  {
+ {
     name: "Generative ai project",
-    type: "want to view",
+    type: "📃summaries_your_pdf",
     project: "ai pdf summarizer",
-    label: "checkout my git_repo👌",
+    label: "checkout_ Its live🤖",
     link: "https://aipdfsummarizer-sigma.vercel.app/",
     image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img2.webp"
   },
