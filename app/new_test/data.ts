@@ -17,12 +17,13 @@ export const awards = [
     link: "https://aipdfsummarizer-sigma.vercel.app/",
     image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img2.webp"
   },
+  
   {
-    name: "mern stack project",
-    type: "wait a some",
-    project: "under development..😈",
-    label: "coming to live",
-      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img3.webp"
+    name: "🔐Crypt Vault password manger",
+    type: "mern stack proj",
+    project: "password manger 😈",
+    label: "checkout_ Its live😎",
+      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/password-generator.webp"
   },
   {
     name: "project 4",
