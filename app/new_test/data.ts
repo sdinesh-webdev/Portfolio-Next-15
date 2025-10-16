@@ -17,9 +17,9 @@ export const awards = [
     link: "https://aipdfsummarizer-sigma.vercel.app/",
     image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img2.webp"
   },
-  
-  {
-    name: "🔐Crypt Vault password manger",
+
+   {
+    name: "🗝️Crypt Vault ",
     type: "mern stack proj",
     project: "password manger 😈",
     label: "checkout_ Its live😎",
