@@ -25,12 +25,12 @@ export const awards = [
     label: "checkout_ Its live😎",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/password-generator.webp"
   },
-  {
-    name: "project 4",
-    type: "wait a some",
-    project: "comming soon ....",
-    label: "to view live",
-      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img4.webp"
+   {
+    name: "⚡99_performace",
+    type: "😋sotd",
+    project: "my_portfolio😏",
+    label: "need_for_speed 🚤",
+      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/seo-99-desktop.webp"
   },
   {
     name: "project 5",
