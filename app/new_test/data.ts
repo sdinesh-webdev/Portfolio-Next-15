@@ -39,11 +39,11 @@ export const awards = [
     label: "view live 🪩",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img5.webp"
   },
-  {
-    name: "project 6",
-    type: "wait a some",
-    project: "comming soon ....",
-    label: "to view live",
+ {
+    name: "📔Book discovery",
+    type: "mern stack proj",
+    project: "Dynamic book discovery.",
+    label: "view live 🪩",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img6.webp"
   },
   {
