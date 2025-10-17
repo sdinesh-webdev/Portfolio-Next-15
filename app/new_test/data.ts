@@ -33,10 +33,10 @@ export const awards = [
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/seo-99-desktop.webp"
   },
   {
-    name: "project 5",
-    type: "wait a some",
-    project: "comming soon ....",
-    label: "to view live",
+    name: "Get. Stuff. Done⁉️",
+    type: "mern stack proj",
+    project: "😅Todo_app.",
+    label: "view live 🪩",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img5.webp"
   },
   {
