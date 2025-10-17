@@ -1,7 +1,7 @@
 import { link } from "fs";
 
 export const awards = [
-    {
+  {
     name: "🦾😎[site of the day] ",
     type: "Get amazed to",
     project: "awwwards gaming site. 😉",
@@ -9,7 +9,7 @@ export const awards = [
     link: "https://awwards-site-phi.vercel.app/",
     image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img1.webp"
   },
- {
+  {
     name: "Generative ai project",
     type: "📃summaries_your_pdf",
     project: "ai pdf summarizer",
@@ -17,19 +17,20 @@ export const awards = [
     link: "https://aipdfsummarizer-sigma.vercel.app/",
     image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img2.webp"
   },
-
-   {
+  {
     name: "🗝️Crypt Vault ",
     type: "mern stack proj",
     project: "password manger 😈",
     label: "checkout_ Its live😎",
+    link: "https://password-generator-five-delta-31.vercel.app/",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/password-generator.webp"
   },
-   {
+  {
     name: "⚡99_performace",
     type: "😋sotd",
     project: "my_portfolio😏",
     label: "need_for_speed 🚤",
+    link: "https://sdineshkumar.vercel.app/",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/seo-99-desktop.webp"
   },
   {
@@ -37,13 +38,15 @@ export const awards = [
     type: "mern stack proj",
     project: "😅Todo_app.",
     label: "view live 🪩",
+    link: "https://todomern-two.vercel.app/",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img5.webp"
   },
- {
+  {
     name: "📔Book discovery",
     type: "mern stack proj",
     project: "Dynamic book discovery.",
     label: "view live 🪩",
+    link: "https://librarysearch.vercel.app/",
       image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img6.webp"
   },
   {
