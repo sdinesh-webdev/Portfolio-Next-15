@@ -39,7 +39,7 @@ export const awards = [
     project: "😅Todo_app.",
     label: "view live 🪩",
     link: "https://todomern-two.vercel.app/",
-      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img5.webp"
+      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/todomern.webp"
   },
   {
     name: "📔Book discovery",
