@@ -1,11 +1,11 @@
 import { link } from "fs";
 
 export const awards = [
-  {
+    {
     name: "🦾😎[site of the day] ",
     type: "Get amazed to",
     project: "awwwards gaming site. 😉",
-    label: "view live",
+    label: "view live 🪩",
     link: "https://awwards-site-phi.vercel.app/",
     image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img1.webp"
   },
