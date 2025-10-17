@@ -29,7 +29,7 @@ const IntroText: React.FC<IntroTextProps> = ({ experience }) => {
         <span className="bg-green-100 px-4 py-1 pb-2">
           Multidisciplinary
         </span>{' '}
-        full-stack developer from India with {experience} year{experience > 1 ? 's' : ''} of experience who loves building websites that look Modern and work&apos;s{' '}
+        full-stack developer from India with year{experience > 1 ? 's' : ''} of experience who loves building websites that look Modern and work&apos;s{' '}
         <span className="bg-sky-100 px-4 py-1 pb-2">
           Awesome
         </span>. <br />
