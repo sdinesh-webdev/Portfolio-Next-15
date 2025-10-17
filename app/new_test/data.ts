@@ -47,7 +47,7 @@ export const awards = [
     project: "Dynamic book discovery.",
     label: "view live 🪩",
     link: "https://librarysearch.vercel.app/",
-      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/img6.webp"
+      image: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/librarysearch.webp"
   },
   {
     name: "project 7",
