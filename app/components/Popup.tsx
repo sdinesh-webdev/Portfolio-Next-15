@@ -68,7 +68,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
       aria-describedby="popup-description"
     >
       <div 
-        className="bg-white p-6 w-full  flex flex-col items-center text-center gap-5
+        className="bg-white p-6 w-full flex flex-col items-center text-center gap-5
                    border-[3px] border-black
                    shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)]
                    hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)]
@@ -82,9 +82,16 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
                    after:z-[-1]
                    will-change-transform"
       >
+        <h2 
+          id="popup-title" 
+          className="sr-only"
+        >
+          Mobile Device Notice
+        </h2>
+        
         <p 
           id="popup-description"
-          className="text-4xl font-medium leading-relaxed"
+          className="text-4xl font-medium leading-relaxed text-black"
         >
           For an{' '}
           <span className="bg-purple-200 px-2 py-1">
