@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
       alt: "GitHub Profile",
     },
     {
-      link: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/1A-S_DINESH_KUMAR_MERN_DEV_2025_CV_compressed.pdf",
+      link: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/1_S_DINESH_KUMAR_FULLSTACK_DEVELOPER_2025.pdf",
       name: "Download Resume",
       alt: "Resume",
     },
