@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
       alt: "GitHub Profile",
     },
     {
-      link: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/1_S_DINESH_KUMAR_FULLSTACK_DEVELOPER_2025.pdf",
+      link: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/A_S_DINESH_KUMAR_MERN_DEV_2025-compressed.pdf",
       name: "Download Resume",
       alt: "Resume",
     },
@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
   return (
     <AnimationWrapper delay={3.3}>
       <section className="contact-section relative flex flex-col w-full md:h-[52vh] lg:m z-20">
-        <h1 className="contact-heading text-start mt-24 pb-6 mb-4 text-6xl md:mt-20 md:mb-6 md:text-9xl font-medium">
+        <h1 className="contact-heading text-start mt-24 pb-6 mb-4 text-6xl md:mt-20 md:mb-6 md:text-9xl font-medium text-black">
           Contact
         </h1>
 
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
             <Work
               {...item}
               id={`contact-${index}`}
-              nameClass="font-normal text-2xl ml-4 z-20"
+              nameClass="font-normal text-2xl ml-4 z-20 text-black"
               containerClass="w-full h-24 relative z-10"
               overlayClass="absolute top-0 left-0 w-full h-full bg-black z-0 transform scale-y-0 origin-top"
             />
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
           </div>
         ))}
 
-        <h2 className="thank-you-message py-20 text-start text-3xl">👋 Thank you.</h2>
+        <h2 className="thank-you-message py-20 text-start text-3xl text-black">👋 Thank you.</h2>
       </section>
     </AnimationWrapper>
   );
