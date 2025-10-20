@@ -7,6 +7,7 @@
 ![PageSpeed](https://img.shields.io/badge/PageSpeed-95+-success?style=for-the-badge)
 
 <img width="1057" height="844" alt="seo-99-desktop" src="https://github.com/user-attachments/assets/7c1ae373-a6b0-4d18-add4-e97828667e18" />
+<img width="1454" height="760" alt="Screenshot_20251001_155909" src="https://github.com/user-attachments/assets/d3eb6f86-55a9-43b4-8a79-c51fe7a2b0a3" />
 
 > Professional portfolio website featuring cutting-edge animations, optimal SEO, and exceptional performance.
 
