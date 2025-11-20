@@ -118,7 +118,7 @@ export default function HomePage() {
       {/* Footer - Server Rendered */}
       <Suspense fallback={<ContactLoading />}>
         <footer 
-          className="footer-section w-full mt-[900px] max-sm:mt-[741px]" 
+          className="footer-section w-full mt-[1228px] max-sm:mt-[741px]" 
           role="contentinfo"
           aria-label="Contact information and professional links"
         >
