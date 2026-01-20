@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // optimizePackageImports is no longer experimental in Next.js 15+
-  optimizePackageImports: ["gsap", "lenis"],
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
@@ -17,9 +15,6 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   // Add cache headers for static assets
   async headers() {
     return [

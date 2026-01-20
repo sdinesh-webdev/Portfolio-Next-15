@@ -10,7 +10,7 @@ interface MousePosition {
 interface AwardPreviewProps {
   activeIndex: number | null;
   mousePosition: MousePosition;
-  awardsListRef: React.RefObject<HTMLDivElement>;
+  awardsListRef: React.RefObject<HTMLDivElement | null>;
 }
 
 interface ImageItem {
@@ -37,14 +37,14 @@ const AwardPreview: React.FC<AwardPreviewProps> = ({
 
   React.useEffect(() => {
     if (!isClient || activeIndex === null) return;
-    
+
     // Add null check and type guard
     const currentAward = awards[activeIndex];
     if (!currentAward?.image) return;
 
     const imgSrc = currentAward.image;
     const newImage: ImageItem = { id: Date.now(), src: imgSrc };
-    
+
     setImages((prev) => {
       if (prev.length >= 2) {
         // remove old images smoothly
