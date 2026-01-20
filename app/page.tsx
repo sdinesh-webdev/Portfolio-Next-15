@@ -75,62 +75,62 @@ function ContactLoading() {
 // Main Server Component
 export default function HomePage() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col relative">
       {/* Skip to main content for accessibility */}
-      <a 
-        href="#main-content" 
+      <a
+        href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50 rounded-br-md transition-all duration-200"
       >
         Skip to main content
       </a>
-      
+
       {/* Header - Server Rendered */}
-      <header role="banner" className="header-section">
+      <header role="banner" className="header-section relative z-10">
         <IntroServer />
       </header>
-      
+
       {/* Main Content - Server Rendered with Suspense boundaries */}
-      <main 
-        id="main-content" 
-        className="main-section w-full h-dvh" 
+      <main
+        id="main-content"
+        className="main-section w-full flex-1 relative z-30"
         role="main"
         aria-label="Portfolio content showcasing S Dinesh Kumar's professional work"
       >
         <Suspense fallback={<ExperienceLoading />}>
-          <section aria-labelledby="experience-heading" className="experience-section">
+          <section aria-labelledby="experience-heading" className="experience-section py-8">
             <Experience />
           </section>
         </Suspense>
-        
+
         <Suspense fallback={<CertificatesLoading />}>
-          <section aria-labelledby="certificates-heading" className="certificates-section">
+          <section aria-labelledby="certificates-heading" className="certificates-section py-8">
             <Certificates />
           </section>
         </Suspense>
-        
+
         <Suspense fallback={<AwardsLoading />}>
-          <section aria-labelledby="awards-heading" className="awards-section">
+          <section aria-labelledby="awards-heading" className="awards-section py-8">
             <Awards />
           </section>
         </Suspense>
       </main>
-      
+
       {/* Footer - Server Rendered */}
       <Suspense fallback={<ContactLoading />}>
-        <footer 
-          className="footer-section w-full mt-[1139px] max-sm:mt-[929px]" 
+        <footer
+          className="footer-section w-full relative z-20 mt-auto"
           role="contentinfo"
           aria-label="Contact information and professional links"
         >
           <Contact />
         </footer>
       </Suspense>
-      
+
       {/* Client-side Enhancements - Hydrated after initial render */}
       <ClientEnhancements />
-      
+
       {/* Analytics - Client-side only */}
       <SpeedInsights />
-    </>
+    </div>
   );
 }

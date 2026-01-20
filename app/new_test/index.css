@@ -52,13 +52,13 @@ section {
   flex-direction: column;
   overflow: hidden;
   overflow: hidden;
-    /* Add this */
-    position: relative;
-    /* Add this */
+  /* Add this */
+  position: relative;
+  /* Add this */
 }
 
 
-.awards  {
+.awards {
   /* padding: 5px 20px; */
   margin-bottom: 1rem;
 }
@@ -80,8 +80,8 @@ section {
   position: relative;
   height: calc(var(--award-height) * 3);
   will-change: transform;
-transform: translateY(calc(var(--award-height) * -2));
-transform-origin: top center;
+  transform: translateY(calc(var(--award-height) * -2));
+  transform-origin: top center;
   width: 100%;
 }
 
@@ -91,7 +91,7 @@ transform-origin: top center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-height: var(--award-height);
+  height: var(--award-height);
   padding: 5px 15px;
   cursor: pointer;
   border-bottom: 1px solid #000;
@@ -120,9 +120,10 @@ height: var(--award-height);
   right: 15px;
   width: 35%;
   height: 35%;
-  z-index: 30;
+  z-index: 100;
   border-radius: 8px;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .award-preview img {

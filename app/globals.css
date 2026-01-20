@@ -8,13 +8,35 @@
   box-sizing: border-box;
 }
 
+/* Lenis smooth scrolling styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 
 @layer base {
   html {
     font-size: 10px;
     padding: 5%;
     scroll-behavior: smooth;
-     height: 2980px;
+    min-height: 100%;
   }
 
   body {
@@ -24,12 +46,12 @@
     font-size: 1.6rem;
     font-weight: 300;
     @apply bg-white text-black;
-    height: 2980pxx;
+    min-height: 100%;
   }
 
   @media screen and (max-width: 768px) {
     html {
-      height: 2742px;
+      min-height: 100%;
     }
   }
 }

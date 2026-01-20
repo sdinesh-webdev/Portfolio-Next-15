@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    optimizePackageImports: ["gsap", "lenis"],
-  },
+  // optimizePackageImports is no longer experimental in Next.js 15+
+  optimizePackageImports: ["gsap", "lenis"],
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
@@ -21,7 +20,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  swcMinify: true,
   // Add cache headers for static assets
   async headers() {
     return [
@@ -46,16 +44,6 @@ const nextConfig = {
         ],
       },
     ];
-  },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(woff|woff2|eot|ttf|otf)$/i,
-      type: "asset/resource",
-      generator: {
-        filename: "static/media/[name][ext]",
-      },
-    });
-    return config;
   },
 };
 

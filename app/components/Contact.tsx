@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
 
   return (
     <AnimationWrapper delay={3.3}>
-      <section className="contact-section relative flex flex-col w-full md:h-[52vh] lg:m z-20">
+      <section className="contact-section relative flex flex-col w-full min-h-[52vh] py-8 z-20 bg-white">
         <h1 className="contact-heading text-start mt-24 pb-6 mb-4 text-6xl md:mt-20 md:mb-6 md:text-9xl font-medium text-black">
           Contact
         </h1>
@@ -44,9 +44,8 @@ const Contact: React.FC = () => {
         {workItems.map((item, index) => (
           <div
             key={index}
-            className={`contact-item border-b border-black mb-0 ${
-              index === 0 ? "border-t" : ""
-            } relative`}
+            className={`contact-item border-b border-black mb-0 ${index === 0 ? "border-t" : ""
+              } relative`}
           >
             <Work
               {...item}
