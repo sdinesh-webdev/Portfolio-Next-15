@@ -23,17 +23,24 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ startDate, endDate, tit
 const Experience: React.FC = () => {
   const experience = [
     {
+      startDate: "Nov 2025",
+      endDate: 'Present',
+      title: 'Backend Developer Intern',
+      company: 'Botivate'
+    },
+    {
       startDate: "Feb 2023",
       endDate: 'June 2023',
       title: 'SEO & React js Developer',
       company: 'NXG Solutions'
     },
+
   ];
 
   return (
     <AnimationWrapper delay={2.2}>
       <section className="experience-section text-left w-full">
-        <h1 
+        <h1
           id="experience-heading"
           className="experience-heading mt-10 mb-4 text-6xl md:mt-20 md:mb-6 md:text-9xl font-medium"
         >

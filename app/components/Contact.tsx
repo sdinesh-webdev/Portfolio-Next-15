@@ -7,6 +7,7 @@ interface WorkItem {
   link: string;
   name: string;
   alt: string;
+  rel?: string;
 }
 
 // Server Component - No hooks, renders on server
@@ -21,11 +22,13 @@ const Contact: React.FC = () => {
       link: "https://www.linkedin.com/in/sdineshku",
       name: "LinkedIn",
       alt: "LinkedIn Profile",
+      rel: "me noopener noreferrer",
     },
     {
       link: "https://github.com/sdinesh-webdev",
       name: "GitHub",
       alt: "GitHub Profile",
+      rel: "me noopener noreferrer",
     },
     {
       link: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/1_S_DINESH_KUMAR_FULLSTACK_DEVELOPER_2025.pdf",

@@ -14,19 +14,21 @@ interface WorkProps {
   imageClass?: string;
   imageStyle?: React.CSSProperties;
   overlayClass?: string;
+  rel?: string;
   alt: string;
 }
 
-const Work: React.FC<WorkProps> = ({ 
-  link, 
-  name, 
-  image, 
-  nameClass, 
-  containerClass, 
-  imageClass, 
-  imageStyle, 
+const Work: React.FC<WorkProps> = ({
+  link,
+  name,
+  image,
+  nameClass,
+  containerClass,
+  imageClass,
+  imageStyle,
   overlayClass,
-  alt 
+  rel = "noopener noreferrer",
+  alt
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const $root = useRef<HTMLAnchorElement>(null);
@@ -96,7 +98,7 @@ const Work: React.FC<WorkProps> = ({
         });
       }
     }
-    
+
     setIsAnimating(isEntering);
   }, []);
 
@@ -111,7 +113,7 @@ const Work: React.FC<WorkProps> = ({
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    
+
     if (isMobile) {
       if (!isAnimating) {
         animate(true, e.clientY);
@@ -140,21 +142,21 @@ const Work: React.FC<WorkProps> = ({
   };
 
   return (
-    <a 
-      ref={$root} 
-      onMouseEnter={handleMouseEnter} 
+    <a
+      ref={$root}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       onClick={handleClick}
-      href={link} 
-      target="_blank" 
-      rel="noopener noreferrer"
+      href={link}
+      target="_blank"
+      rel={rel}
       className={`relative flex items-center ${containerClass}`}
     >
       {image && (
         <div className={`relative ${imageClass} responsive-image-container`} ref={$imageContainer} style={{ overflow: 'hidden' }}>
-          <Image 
+          <Image
             src={image}
             alt={alt}
             fill
@@ -165,7 +167,7 @@ const Work: React.FC<WorkProps> = ({
         </div>
       )}
       <span
-        className={nameClass} 
+        className={nameClass}
         ref={$link}
       >
         {parse(name)}
