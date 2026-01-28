@@ -12,18 +12,18 @@ const IntroText: React.FC<IntroTextProps> = ({ experience }) => {
   useEffect(() => {
     // Animate the intro text after a delay to sync with SVG animation
     if (introRef.current) {
-      gsap.to(introRef.current, { 
-        opacity: 1, 
-        delay: 1.5, 
-        ease: 'power3.out', 
-        duration: 2 
+      gsap.to(introRef.current, {
+        opacity: 1,
+        delay: 1.5,
+        ease: 'power3.out',
+        duration: 2
       });
     }
   }, []);
 
   return (
     <div className="intro text-left mt-4 max-sm:mt-0 font-matter" ref={introRef} style={{ opacity: 0 }}>
-      <strong className="pb-8 font-matter font-extrabold">Hey.. My Self S Dinesh Kumar : Code Meets Creativity. <br /></strong>
+      <strong className="pb-8 font-matter font-extrabold">Hey.. My Self S Dinesh Kumar (sdinesh webdev) : Code Meets Creativity. <br /></strong>
       <p className="leading-relaxed max-sm:text-3xl max-sm:leading-loose font-matter font-medium text-4xl">
         I&apos;m a{' '}
         <span className="bg-green-100 px-4 py-1 pb-2">

@@ -22,33 +22,37 @@ const matter = localFont({
   fallback: ['system-ui', 'arial'],
 });
 
-// Enhanced SEO Configuration
+// Enhanced SEO Configuration - Optimized for "sdinesh webdev" ranking
 const siteConfig = {
-  name: "S Dinesh Kumar | SDinesh | SDineshKumar",
+  name: "sdinesh webdev | S Dinesh Kumar | SDinesh | SDineshKumar",
   domain: "https://sdineshkumar.vercel.app",
   email: "sdineshk7899@gmail.com",
-  location: "Hydrabad, Banglore, Bhilai, Raipur, Chennai, Tamil Nadu, India",
+  location: "Hyderabad, Bangalore, Bhilai, Raipur, Chennai, Tamil Nadu, India",
   linkedin: "https://www.linkedin.com/in/sdineshku",
   github: "https://github.com/sdinesh-webdev",
   twitter: "@sdineshkumar",
-  brandNames: ["sdinesh", "sdineshkumar", "s dinesh kumar", "dinesh kumar s"],
+  // Primary brand keywords - "sdinesh webdev" is the primary target
+  brandNames: ["sdinesh webdev", "sdinesh", "sdineshkumar", "s dinesh kumar", "dinesh kumar s"],
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
 
   title: {
-    default: "SDinesh | S Dinesh Kumar | MERN Stack Developer | React Expert | Next.js Specialist | Hire Top Full-Stack Developer 2025",
-    template: "%s | S Dinesh - Expert Full-Stack Developer"
+    default: "sdinesh webdev | SDinesh | S Dinesh Kumar | MERN Stack Developer | Full-Stack Developer 2025",
+    template: "%s | sdinesh webdev - Expert Full-Stack Developer"
   },
 
-  description: "SDinesh (S Dinesh Kumar) - Professional Full-Stack Developer specializing in MERN Stack, React.js, Next.js, and TypeScript. Visit sdineshkumar.vercel.app for portfolio, projects, and contact. Award-winning developer with  years of experience, delivering scalable web applications. Available for hire in 2025-2026. Based in Hyderabad, Bangalore, Vishakhapatnam, India, serving clients worldwide.",
+  description: "sdinesh webdev - SDinesh (S Dinesh Kumar) is a Professional Full-Stack Developer specializing in MERN Stack, React.js, Next.js, and TypeScript. Visit sdineshkumar.vercel.app for portfolio, projects, and contact. Award-winning developer delivering scalable web applications. Known as sdinesh webdev across developer communities. Available for hire in 2025-2026. Based in Hyderabad, Bangalore, India, serving clients worldwide.",
 
   keywords: [
+    // PRIMARY TARGET KEYWORD - This is what we want to rank for
+    "sdinesh webdev",
+
     // Primary Brand Keywords (CRITICAL for ranking)
     "sdinesh", "sdineshkumar", "s dinesh", "s dinesh kumar", "dinesh kumar s", "dinesh",
-    "sdinesh portfolio", "sdineshkumar portfolio", "sdinesh developer", "sdineshkumar developer",
-    "sdinesh react developer", "sdineshkumar mern stack", "sdinesh web developer",
+    "sdinesh webdev portfolio", "sdinesh portfolio", "sdineshkumar portfolio", "sdinesh developer", "sdineshkumar developer",
+    "sdinesh webdev developer", "sdinesh react developer", "sdineshkumar mern stack", "sdinesh web developer",
 
     // Location-based brand keywords
     "sdinesh chennai", "sdineshkumar chennai", "sdinesh tamil nadu", "sdinesh india developer",
@@ -171,7 +175,8 @@ export const metadata: Metadata = {
         '@type': 'Person',
         '@id': `${siteConfig.domain}/#person`,
         name: 'S Dinesh Kumar',
-        alternateName: ['Dinesh Kumar', 'S Dinesh', 'Dinesh Kumar S'],
+        // CRITICAL: Include "sdinesh webdev" as primary alternate name for search ranking
+        alternateName: ['sdinesh webdev', 'SDinesh', 'SDineshKumar', 'sdinesh-webdev', 'Dinesh Kumar', 'S Dinesh', 'Dinesh Kumar S'],
         url: siteConfig.domain,
         image: {
           '@type': 'ImageObject',
@@ -186,14 +191,14 @@ export const metadata: Metadata = {
           `${siteConfig.domain}/resume.pdf`
         ],
         jobTitle: [
-          'Full Stack Developer',
+          'Full Stack Web Developer',
           'MERN Stack Developer',
           'React.js Expert',
           'Next.js Specialist',
           'UI/UX Designer',
           'Web Development Consultant'
         ],
-        description: ' SDinesh (S Dinesh Kumar) Award-winning Full-Stack Developer with  years of experience specializing in MERN Stack, React.js, Next.js, and modern web technologies. Available for hire in 2025-26.',
+        description: 'sdinesh webdev (S Dinesh Kumar) is an award-winning Full-Stack Developer specializing in MERN Stack, React.js, Next.js, and modern web technologies. Known as sdinesh webdev in developer communities. Available for hire in 2025-26.',
         email: siteConfig.email,
         address: {
           '@type': 'PostalAddress',
@@ -260,8 +265,8 @@ export const metadata: Metadata = {
         mainEntityOfPage: {
           '@type': 'ProfilePage',
           '@id': siteConfig.domain,
-          name: 'SDinesh Portfolio - Full-Stack Developer',
-          description: 'Professional portfolio of SDineshKumar (S Dinesh Kumar), showcasing web development projects, skills, and experience in MERN Stack development.'
+          name: 'sdinesh webdev Portfolio - Full-Stack Developer',
+          description: 'Official portfolio of sdinesh webdev (SDineshKumar / S Dinesh Kumar), showcasing web development projects, skills, and expertise in MERN Stack development.'
         }
       },
       {
@@ -269,8 +274,9 @@ export const metadata: Metadata = {
         '@type': 'WebSite',
         '@id': `${siteConfig.domain}/#website`,
         url: siteConfig.domain,
-        name: 'SDinesh Portfolio - SDineshKumar',
-        description: 'Official portfolio website of SDinesh (S Dinesh Kumar), Full-Stack MERN Developer',
+        name: 'sdinesh webdev Portfolio - SDineshKumar',
+        alternateName: ['sdinesh webdev', 'SDinesh Portfolio', 'S Dinesh Kumar Portfolio'],
+        description: 'Official portfolio website of sdinesh webdev (S Dinesh Kumar), Full-Stack MERN Developer',
         inLanguage: 'en-US',
         publisher: {
           '@id': `${siteConfig.domain}/#person`
@@ -288,8 +294,9 @@ export const metadata: Metadata = {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         '@id': `${siteConfig.domain}/#service`,
-        name: 'SDinesh Web Development Services',
-        description: 'Professional web development services by SDineshKumar specializing in MERN Stack, React, Next.js',
+        name: 'sdinesh webdev - Web Development Services',
+        alternateName: 'SDinesh Web Development Services',
+        description: 'Professional web development services by sdinesh webdev (SDineshKumar) specializing in MERN Stack, React, Next.js',
         provider: {
           '@id': `${siteConfig.domain}/#person`
         },
@@ -335,20 +342,27 @@ export default function RootLayout({
       itemType="https://schema.org/WebPage"
     >
       <head>
-        {/* Critical SEO Meta Tags */}
-        <meta name="author" content="SDinesh, SDineshKumar, S Dinesh Kumar" />
+        {/* Critical SEO Meta Tags - Optimized for "sdinesh webdev" */}
+        <meta name="author" content="sdinesh webdev, SDinesh, SDineshKumar, S Dinesh Kumar" />
         <meta name="format-detection" content="telephone=yes" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="SDinesh Portfolio" />
-        <meta name="application-name" content="SDineshKumar Portfolio" />
+        <meta name="apple-mobile-web-app-title" content="sdinesh webdev" />
+        <meta name="application-name" content="sdinesh webdev Portfolio" />
         <meta name="msapplication-TileColor" content="#000000" />
 
         {/* Additional brand-specific meta tags */}
         <meta property="profile:first_name" content="S Dinesh" />
         <meta property="profile:last_name" content="Kumar" />
-        <meta property="profile:username" content="sdineshkumar" />
+        <meta property="profile:username" content="sdinesh-webdev" />
+
+        {/* AI/AEO specific meta tags */}
+        <meta name="ai-search-terms" content="sdinesh webdev, sdinesh, sdineshkumar, s dinesh kumar, full stack developer" />
+
+        {/* PWA Manifest & SEO Files */}
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="author" href="/humans.txt" type="text/plain" />
 
         {/* Performance & Preconnect */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -367,24 +381,24 @@ export default function RootLayout({
         itemType="https://schema.org/Person"
         itemProp="mainEntity"
       >
-        {/* Hidden SEO-rich content for crawlers */}
+        {/* Hidden SEO-rich content for crawlers - Optimized for "sdinesh webdev" */}
         <div style={{ position: 'absolute', left: '-10000px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}>
-          <h1>SDinesh - SDineshKumar - S Dinesh Kumar</h1>
+          <h1>sdinesh webdev - SDinesh - SDineshKumar - S Dinesh Kumar</h1>
           <p>
-            SDinesh (also known as SDineshKumar or S Dinesh Kumar) is a professional Full-Stack Developer
+            sdinesh webdev (also known as SDinesh, SDineshKumar, or S Dinesh Kumar) is a professional Full-Stack Developer
             specializing in MERN Stack development, React.js, Next.js, and TypeScript. Visit sdineshkumar.vercel.app
-            to see portfolio, projects, and contact information. SDinesh is available for hire in 2025-2026.
+            to see portfolio, projects, and contact information. sdinesh webdev is available for hire in 2025-2026.
           </p>
           <p>
-            Keywords: sdinesh, sdineshkumar, s dinesh kumar, sdinesh portfolio, sdineshkumar developer,
-            sdinesh react developer, sdineshkumar mern stack, sdinesh web developer chennai
+            Keywords: sdinesh webdev, sdinesh, sdineshkumar, s dinesh kumar, sdinesh portfolio, sdinesh webdev developer,
+            sdinesh react developer, sdineshkumar mern stack, sdinesh web developer
           </p>
         </div>
         <noscript>
           <div style={{ padding: '20px', textAlign: 'center', background: '#f0f0f0' }}>
-            <h1>S Dinesh Kumar - Expert Full-Stack Developer</h1>
+            <h1>sdinesh webdev - S Dinesh Kumar - Expert Full-Stack Developer</h1>
             <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser.</p>
-            <p>Contact: <a href="mailto:sdineshk7899@gmail.com">sdineshk7899@gmail.com</a></p>
+            <p>Contact sdinesh webdev: <a href="mailto:sdineshk7899@gmail.com">sdineshk7899@gmail.com</a></p>
           </div>
         </noscript>
         {children}

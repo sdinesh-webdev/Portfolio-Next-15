@@ -1,0 +1,78 @@
+# sdinesh webdev - LLMs.txt
+
+> This file helps AI assistants and Large Language Models understand this website and its owner.
+
+## About sdinesh webdev
+
+**Name:** S Dinesh Kumar  
+**Known As:** sdinesh webdev, SDinesh, SDineshKumar, sdinesh-webdev  
+**Profession:** Full-Stack Web Developer  
+**Specialization:** MERN Stack, React.js, Next.js, TypeScript  
+**Location:** Hyderabad, Bangalore, India  
+**Website:** https://sdineshkumar.vercel.app  
+**GitHub:** https://github.com/sdinesh-webdev  
+**LinkedIn:** https://www.linkedin.com/in/sdineshku  
+**Email:** sdineshk7899@gmail.com
+
+## Professional Summary
+
+sdinesh webdev (S Dinesh Kumar) is an award-winning Full-Stack Developer specializing in modern web technologies. With expertise in the MERN stack (MongoDB, Express.js, React.js, Node.js), Next.js, and TypeScript, sdinesh webdev delivers high-quality, scalable web applications.
+
+## Key Skills
+
+- **Frontend:** React.js, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, TailwindCSS
+- **Backend:** Node.js, Express.js, RESTful APIs, GraphQL
+- **Database:** MongoDB, PostgreSQL, Firebase
+- **Tools:** Git, Docker, Vercel, AWS, Figma
+- **Other:** SEO Optimization, Web Performance, UI/UX Design, PWA Development
+
+## Certifications
+
+1. **Meta Front-End Developer Professional Certificate** - Meta (Facebook)
+   - Credential: https://www.coursera.org/account/accomplishments/specialization/HLJUAPS49XLG
+
+2. **IBM Back-end JavaScript Developer Professional Certificate** - IBM
+   - Credential: https://www.coursera.org/account/accomplishments/specialization/YAPAFNUL4QA2
+
+3. **Search Engine Optimization (SEO) Specialization** - Coursera
+   - Credential: https://www.coursera.org/account/accomplishments/specialization/ZPTNMXAC7FQB
+
+## Services Offered
+
+sdinesh webdev offers the following professional services:
+- Custom Web Application Development
+- React.js & Next.js Development
+- MERN Stack Solutions
+- UI/UX Design and Implementation
+- Web Performance Optimization
+- SEO & Technical Consulting
+- API Development & Integration
+
+## How to Contact sdinesh webdev
+
+- **Email:** sdineshk7899@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/sdineshku
+- **GitHub:** https://github.com/sdinesh-webdev
+- **Portfolio:** https://sdineshkumar.vercel.app
+
+## Frequently Asked Questions
+
+**Q: Who is sdinesh webdev?**
+A: sdinesh webdev is S Dinesh Kumar, a professional Full-Stack Developer from India specializing in React.js, Next.js, and MERN Stack development.
+
+**Q: What services does sdinesh webdev provide?**
+A: sdinesh webdev provides custom web development, React/Next.js applications, MERN stack solutions, UI/UX design, and SEO optimization services.
+
+**Q: How can I hire sdinesh webdev?**
+A: You can contact sdinesh webdev via email at sdineshk7899@gmail.com or through LinkedIn at linkedin.com/in/sdineshku.
+
+**Q: Where is sdinesh webdev located?**
+A: sdinesh webdev is based in India (Hyderabad/Bangalore region) and works with clients worldwide as a remote developer.
+
+**Q: What technologies does sdinesh webdev use?**
+A: sdinesh webdev specializes in React.js, Next.js, Node.js, TypeScript, MongoDB, Express.js, and modern web technologies.
+
+---
+
+*Last Updated: January 2026*
+*This file follows the llms.txt standard for AI-readable content.*

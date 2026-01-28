@@ -9,11 +9,14 @@ import ClientEnhancements from './components/ClientEnhancements';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import './globals.css';
 
-// Generate metadata for SEO
+// Generate metadata for SEO - Optimized for "sdinesh webdev" ranking
 export const metadata: Metadata = {
-  title: 'S Dinesh Kumar | Expert Full-Stack Developer',
-  description: 'Professional portfolio showcasing expertise in MERN Stack, React.js, Next.js development',
+  title: 'sdinesh webdev | S Dinesh Kumar | Expert Full-Stack Developer',
+  description: 'sdinesh webdev - Professional portfolio of S Dinesh Kumar showcasing expertise in MERN Stack, React.js, Next.js development. Hire sdinesh webdev for your next project.',
+  keywords: ['sdinesh webdev', 'sdinesh', 'sdineshkumar', 's dinesh kumar', 'full stack developer', 'mern stack', 'react developer', 'next.js developer'],
+  authors: [{ name: 'sdinesh webdev', url: 'https://sdineshkumar.vercel.app' }],
 };
+
 
 // Loading skeleton components for better UX
 function ExperienceLoading() {

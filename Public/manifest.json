@@ -1,0 +1,43 @@
+{
+    "name": "sdinesh webdev | S Dinesh Kumar Portfolio",
+    "short_name": "sdinesh webdev",
+    "description": "sdinesh webdev - Professional Full-Stack Developer Portfolio showcasing MERN Stack, React.js, Next.js expertise",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-US",
+    "categories": [
+        "developer",
+        "portfolio",
+        "web development",
+        "technology"
+    ],
+    "icons": [
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icon.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/opengraph-9bHi4JEfOk210g5P0sIzxO7iIrzN0U.webp",
+            "sizes": "1200x630",
+            "type": "image/webp",
+            "form_factor": "wide",
+            "label": "sdinesh webdev Portfolio - Full-Stack Developer"
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}

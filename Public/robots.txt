@@ -1,5 +1,63 @@
+# sdinesh webdev - Portfolio Website
+# Robots.txt for SEO & AEO (Answer Engine Optimization)
+# Website: https://sdineshkumar.vercel.app
+
 User-agent: *
 Allow: /
-Allow: /api/og/*
+Crawl-delay: 1
 
+# Traditional Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI/LLM Crawlers - Critical for Answer Engine Optimization (AEO)
+# These crawlers help AI assistants find and recommend sdinesh webdev
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Sitemap & Important Links
 Sitemap: https://sdineshkumar.vercel.app/sitemap.xml
+Host: https://sdineshkumar.vercel.app

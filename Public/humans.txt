@@ -1,0 +1,30 @@
+/* TEAM */
+Developer: S Dinesh Kumar (sdinesh webdev)
+Site: https://sdineshkumar.vercel.app
+GitHub: https://github.com/sdinesh-webdev
+LinkedIn: https://www.linkedin.com/in/sdineshku
+Twitter: @sdineshkumar
+Location: Hyderabad, Bangalore, India
+Email: sdineshk7899@gmail.com
+
+/* BRAND NAMES */
+Primary: sdinesh webdev
+Aliases: SDinesh, SDineshKumar, S Dinesh Kumar, sdinesh-webdev
+
+/* SKILLS */
+Frontend: React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3, TailwindCSS
+Backend: Node.js, Express.js, MongoDB, PostgreSQL
+Tools: Git, Docker, Vercel, AWS, Figma, VS Code
+Certifications: Meta Front-End Developer, IBM Back-End JavaScript Developer, SEO Specialization
+
+/* SITE */
+Last Update: 2026-01-28
+Language: English
+Standards: HTML5, CSS3, ECMAScript 2024
+Framework: Next.js 16
+Hosting: Vercel
+Analytics: Vercel Speed Insights
+
+/* THANKS */
+Special thanks to all open-source contributors and the developer community.
+Built with passion by sdinesh webdev.
