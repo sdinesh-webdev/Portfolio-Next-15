@@ -58,6 +58,16 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# LLM Discovery File
+# Used by AI agents to understand the site content better
+# Location: https://sdineshkumar.vercel.app/llms.txt
+
 # Sitemap & Important Links
 Sitemap: https://sdineshkumar.vercel.app/sitemap.xml
 Host: https://sdineshkumar.vercel.app

@@ -25,13 +25,13 @@ const Experience: React.FC = () => {
     {
       startDate: "Nov 2025",
       endDate: 'Present',
-      title: 'Backend Developer Intern',
+      title: 'Backend Developer / Software Engineer Intern',
       company: 'Botivate'
     },
     {
       startDate: "Feb 2023",
       endDate: 'June 2023',
-      title: 'SEO & React js Developer',
+      title: 'SEO Expert & React.js Software Developer',
       company: 'NXG Solutions'
     },
 
