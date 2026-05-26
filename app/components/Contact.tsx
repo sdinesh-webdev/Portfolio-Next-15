@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
       rel: "me noopener noreferrer",
     },
     {
-      link: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/1_S_DINESH_KUMAR_FULLSTACK_DEVELOPER_2025.pdf",
+      link: "https://oabk6vpcyt3tfpux.public.blob.vercel-storage.com/S_DINESH_KUMAR_FullStack_Developer_CV_2026_V2.pdf",
       name: "Download Resume",
       alt: "Resume",
     },
